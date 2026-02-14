@@ -167,6 +167,27 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* Xóa hiệu ứng gradient dưới thanh tìm kiếm trong Settings sidebar */
+.theme-dark .searchBarContainer__409aa::after,
+.theme-dark .searchBarContainer__409aa::before {
+  display: none !important;
+  background: none !important;
+}
+
+.theme-dark .fixedContent__409aa::after,
+.theme-dark .fixedContent__409aa::before {
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.theme-dark .navScroller__409aa::before,
+.theme-dark .navScroller__409aa::after {
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
 /* --- Profile Customization Tab in Sidebar --- */
 .theme-dark .profileCustomizationTab__99464 {
   padding: 4px 0;
@@ -11298,6 +11319,27 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 
 .theme-dark .searchBarContainer__409aa .input__0f084::placeholder {
   color: rgba(255, 255, 255, 0.4);
+}
+
+/* Xóa hiệu ứng gradient dưới thanh tìm kiếm trong Settings sidebar */
+.theme-dark .searchBarContainer__409aa::after,
+.theme-dark .searchBarContainer__409aa::before {
+  display: none !important;
+  background: none !important;
+}
+
+.theme-dark .fixedContent__409aa::after,
+.theme-dark .fixedContent__409aa::before {
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.theme-dark .navScroller__409aa::before,
+.theme-dark .navScroller__409aa::after {
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
 }
 
 /* --- Profile Customization Tab in Sidebar --- */
