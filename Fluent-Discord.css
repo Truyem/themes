@@ -1933,15 +1933,13 @@ html.theme-dark.app-focused .clickable_c99c29::before {
 }
 
 .theme-dark .panels__5e434 {
-  background-color: #282828;
-  border-radius: 4px;
+  /* Blur effects added in Enhanced Blur Effects section at end of file */
 }
 
 .theme-dark .panels__5e434 .container__37e49 {
-  background-color: transparent;
+  /* Blur effects added in Enhanced Blur Effects section at end of file */
   height: 48px;
   margin-bottom: 0;
-  border-radius: 8px;
 }
 
 
