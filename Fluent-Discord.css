@@ -919,14 +919,14 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
 .theme-dark .settingsTabBar_dc2e0e .item_caf372 .textBadge_f05120,
 .theme-dark .tabBar__4efb4 .item_caf372 .textBadge_f05120,
 .theme-dark .top_aa8da2 .item_caf372 .textBadge_f05120 {
-  background-color: #2E2E2E !important;
+  background-color: transparent !important;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
 .botTagRegular__82f07 {
-  background-color: #2E2E2E;
+  background-color: transparent;
   text-transform: none;
 }
 
@@ -1614,7 +1614,7 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
 }
 
 .theme-dark .popout__3f413 {
-  background: #2C2C2C;
+  background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -1933,7 +1933,7 @@ html.theme-dark.app-focused .clickable_c99c29::before {
 }
 
 .theme-dark .panels__5e434 {
-  background-color: #282828;
+  background-color: transparent;
   border-radius: 4px;
 }
 
@@ -2492,7 +2492,7 @@ html[lang^=en-].theme-dark .panels__5e434 .button__201d5[aria-label] .contents__
   bottom: calc(100% + 4px);
   left: 0;
   box-shadow: none;
-  background-color: #1C1C1C;
+  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.0698);
   border-radius: 4px;
 }
@@ -2528,7 +2528,7 @@ html[lang^=en-].theme-dark .panels__5e434 .button__201d5[aria-label] .contents__
 }
 
 .theme-dark .autocomplete__13533 .categoryHeader_d1405b {
-  background-color: #1C1C1C;
+  background-color: transparent;
 }
 
 .theme-dark .autocomplete__13533 .categoryHeader_d1405b .headerLabel__14245 {
@@ -2770,7 +2770,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 .theme-dark .jumpToPresentBar__0f481 {
   bottom: 8px;
   padding-bottom: 0;
-  background-color: #1C1C1C;
+  background-color: transparent;
 }
 
 .theme-dark .messagesErrorBar__0f481 {
@@ -2851,7 +2851,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 .theme-dark .divider__908e2 .content__908e2,
 .theme-dark .divider__908e2 .unreadPill__908e2 {
   padding: 2px 8px;
-  background-color: #2E2E2E;
+  background-color: transparent;
   color: #FFF;
   font-size: 12px;
   font-weight: 400;
@@ -3253,7 +3253,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 }
 
 .theme-dark .stackedBars__74017 {
-  background-color: #1C1C1C;
+  background-color: transparent;
 }
 
 .theme-dark .stackedBars__74017 .name__84522 {
@@ -3475,7 +3475,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 
 .theme-dark .container__01ae2 .chatHeaderBar_a5700d {
   margin: 8px;
-  background-color: #2E2E2E;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -3563,7 +3563,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 }
 
 .theme-dark .chatLayerWrapper__01ae2 .container__01ae2 {
-  background-color: #202020;
+  background-color: transparent;
 }
 
 .theme-dark .chatLayerWrapper__01ae2 .container__01ae2.floating__01ae2 {
@@ -3722,7 +3722,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 .theme-dark .videoControls_f316dd {
   height: 48px;
   padding: 0 8px;
-  background-color: #2C2C2C;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   box-sizing: border-box;
@@ -3769,7 +3769,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 .theme-dark .videoControls_f316dd .mediaBarInteractionVolume_f7877e {
   height: 32px;
   padding: 0 16px;
-  background-color: #2C2C2C;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
@@ -5556,7 +5556,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 
 .theme-dark .root__52f07 .activityTag__18da2 {
   padding: 2px 8px;
-  background-color: #2E2E2E;
+  background-color: transparent;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -5564,7 +5564,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-light .root__49fc1 {
-  background: #202020;
+  background: transparent;
   border: 1px solid rgba(117, 117, 117, 0.4);
   border-radius: 8px;
   box-shadow: none;
@@ -5869,7 +5869,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 
 .theme-dark .root__2dbe1 {
   min-height: auto !important;
-  background-color: #202020;
+  background-color: transparent;
   border: 1px solid rgba(117, 117, 117, 0.4);
   border-radius: 8px;
   justify-content: space-between;
@@ -6009,7 +6009,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .root__49fc1 {
-  background-color: #202020;
+  background-color: transparent;
   border: 1px solid rgba(117, 117, 117, 0.4);
   border-radius: 8px;
 }
@@ -6154,7 +6154,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 
 .theme-dark .quickswitcher_ac6cb0 {
   height: 100%;
-  background-color: #202020;
+  background-color: transparent;
 }
 
 .theme-dark .quickswitcher_ac6cb0::before {
@@ -6421,7 +6421,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .guildSidebar_b962dc {
-  background: #202020;
+  background: transparent;
 }
 
 .theme-dark .guildSidebar_b962dc .guildDescription_b962dc {
@@ -6484,7 +6484,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .modal__9a792 {
-  background-color: #202020 !important;
+  background-color: transparent !important;
 }
 
 .theme-dark .container_d9c882 {
@@ -6700,7 +6700,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .container__56cd1 {
-  background: #1C1C1C;
+  background: transparent;
   backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -6749,7 +6749,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .popout__76f04 {
-  background: #1C1C1C;
+  background: transparent;
   backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -6775,7 +6775,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .streamPreview__6da2d {
-  background: #1C1C1C;
+  background: transparent;
   backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -6902,7 +6902,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .categoryList_c0e32c {
-  background-color: #202020;
+  background-color: transparent;
 }
 
 .theme-dark .categoryItemDefaultCategory_b9ee0c.categoryItem_b9ee0c svg {
@@ -6968,7 +6968,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .inspector_aeaaeb {
-  background-color: #1C1C1C;
+  background-color: transparent;
 }
 
 .theme-dark .topGuildEmojiBadge_aeaaeb {
@@ -6979,7 +6979,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 .theme-dark .wrapper__14245 {
   margin: 0 -8px;
   padding: 0 16px;
-  background-color: #282828;
+  background-color: transparent;
   border-radius: 4px;
 }
 
@@ -7025,7 +7025,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .premiumPromo__3a1b6 {
-  background-color: #1C1C1C;
+  background-color: transparent;
 }
 
 .theme-dark .premiumPromo__3a1b6 .premiumPromoImage__3a1b6 {
@@ -7118,7 +7118,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 .theme-dark .recentMentionsPopout__95796 .channel__427f0 .channelHeader__35a7e {
   top: -1px;
   padding-right: 16px;
-  background-color: #1C1C1C;
+  background-color: transparent;
   border-radius: 4px 4px 0 0;
 }
 
@@ -7173,7 +7173,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .noiseCancellationPopout_e131a9 {
-  background-color: #202020;
+  background-color: transparent;
   border: 1px solid rgba(117, 117, 117, 0.4);
   border-radius: 8px;
 }
@@ -7305,7 +7305,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .container__3dde2 {
-  background-color: #202020;
+  background-color: transparent;
   border: 1px solid rgba(117, 117, 117, 0.4);
   border-radius: 8px;
 }
@@ -7333,7 +7333,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .container__13b2a {
-  background-color: #202020;
+  background-color: transparent;
   border: 1px solid rgba(117, 117, 117, 0.4);
   border-radius: 8px;
 }
@@ -7601,7 +7601,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .picker__09f65 .categoryList_a1e0e0 {
-  background-color: #202020;
+  background-color: transparent;
 }
 
 .theme-dark .picker__09f65 .sectionHeader__61424 .sectionTitle__61424 {
@@ -8105,7 +8105,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 
 .theme-dark .contentColumn__23e6b#roles-tab .header_c6bf1b {
   padding-top: 40px;
-  background-color: #1C1C1C;
+  background-color: transparent;
 }
 
 .theme-dark .contentColumn__23e6b#roles-tab .header_c6bf1b .titleText__81b3e {
@@ -8176,7 +8176,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .contentColumn__23e6b .editCard_a25a68 .resultsList__6ae25 {
-  background: #2C2C2C;
+  background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
@@ -10303,7 +10303,7 @@ div[id^=bd-floating-window-],
 div[id^=bd-floating-window-] .floating-window-titlebar,
 #floating-editor-window .floating-window-titlebar {
   height: 32px;
-  background-color: #202020;
+  background-color: transparent;
 }
 
 div[id^=bd-floating-window-] .floating-window-titlebar .title,
@@ -10332,7 +10332,7 @@ div[id^=bd-floating-window-] .floating-window-titlebar .floating-window-buttons 
 
 div[id^=bd-floating-window-] .floating-window-content,
 #floating-editor-window .floating-window-content {
-  background-color: #202020;
+  background-color: transparent;
 }
 
 div[id^=bd-floating-window-] #bd-editor-controls,
@@ -10603,7 +10603,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f.cursorPointer_B3u
 }
 
 :root {
-  --settingsbackground_v: #282828 !important;
+  --settingsbackground_v: transparent !important;
 }
 
 .theme-dark .botTag__5d473[style],
