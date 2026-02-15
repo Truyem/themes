@@ -1933,15 +1933,13 @@ html.theme-dark.app-focused .clickable_c99c29::before {
 }
 
 .theme-dark .panels__5e434 {
-  background-color: #282828;
-  border-radius: 4px;
+  /* Blur effects added in Enhanced Blur Effects section at end of file */
 }
 
 .theme-dark .panels__5e434 .container__37e49 {
-  background-color: transparent;
+  /* Blur effects added in Enhanced Blur Effects section at end of file */
   height: 48px;
   margin-bottom: 0;
-  border-radius: 8px;
 }
 
 .theme-dark .panels__5e434 .avatarWrapper__37e49 {
@@ -11950,4 +11948,124 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 /* Resize handle */
 .theme-dark .resizeHandle__01ae2 {
   background: transparent !important;
+}
+
+/* =============================================================
+ * Enhanced Blur Effects — Comprehensive Panel & Popup Styling
+ * ============================================================= */
+
+/* --- Main Panels Container --- */
+.theme-dark .panels__5e434 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px !important;
+}
+
+/* --- Activity Panel with Blur --- */
+.theme-dark .panel__5dec7.activityPanel__5e434 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Voice Connect Panel Wrapper --- */
+.theme-dark .panels__5e434 .wrapper_e131a9 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Account Info Container with Enhanced Blur --- */
+.theme-dark .panels__5e434 .container__37e49 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Voice Call Detail Popup --- */
+.theme-dark .container__50387 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Search Popup Container --- */
+.theme-dark .container__16eb0 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Server Boost Page Container --- */
+.theme-dark .container__89463 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Server Boost Sidebar Container --- */
+.theme-dark .sidebarContainer__89463 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Generic Popup/Modal Containers --- */
+.theme-dark [class*="modal__"][class*="container"],
+.theme-dark [class*="popout"][class*="container"],
+.theme-dark [class*="popup"][class*="container"] {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Popover Floating Elements --- */
+.theme-dark [class*="popover__"],
+.theme-dark [class*="menu__"] {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Layer Container for Overlays --- */
+.theme-dark [class*="layerContainer"] [class*="layer"] {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* --- Context Menu Blur --- */
+.theme-dark [class*="contextMenu"] {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Tooltip Containers --- */
+.theme-dark [class*="tooltip"] {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
 }
