@@ -11747,3 +11747,207 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 .theme-dark .selectField__0edde:hover {
   background-color: rgba(255, 255, 255, 0.08) !important;
 }
+/* =========================================================
+ * Soundboard — Xoá thanh đen, cách âm thanh với tên server,
+ * nút âm thanh blur
+ * ========================================================= */
+
+/* Xoá nền đen tổng thể của soundboard */
+.theme-dark .listItems_affa7e {
+  background: transparent !important;
+}
+
+/* Section container + header */
+.theme-dark .sectionContainer__61424 {
+  background: transparent !important;
+  margin-bottom: 8px;
+}
+
+.theme-dark .sectionHeader__61424 {
+  background: transparent !important;
+  padding: 8px 12px !important;
+  margin-bottom: 6px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Sound rows — thêm gap */
+.theme-dark .soundRow__61424 {
+  background: transparent !important;
+  gap: 6px !important;
+  padding: 4px 8px !important;
+}
+
+/* Nút âm thanh — blur */
+.theme-dark .soundButton__9be63 {
+  background: rgba(60, 60, 60, 0.45) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 8px !important;
+}
+
+.theme-dark .soundButton__9be63:hover {
+  background: rgba(80, 80, 80, 0.55) !important;
+}
+
+/* Nút thêm âm thanh */
+.theme-dark .soundAddButton_da9eb2 {
+  background: rgba(60, 60, 60, 0.3) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px dashed rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+/* =========================================================
+ * Upload Area — Blur
+ * ========================================================= */
+.theme-dark .uploadArea_f75fb0,
+.theme-dark .uploadArea_b78547 {
+  background: transparent !important;
+}
+
+.theme-dark .uploadDropModal_b78547 {
+  background: rgba(30, 30, 30, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 2px dashed rgba(255, 255, 255, 0.15) !important;
+  border-radius: 12px !important;
+}
+
+.theme-dark .bgScale_b78547 {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Voice Call Video Grid — Xoá hết nền đen
+ * ========================================================= */
+.theme-dark .videoGridWrapper_a21736 {
+  background: transparent !important;
+}
+
+.theme-dark .videoGrid_a21736 {
+  background: transparent !important;
+}
+
+.theme-dark .callContainer_cb9592 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .root_bfe55a,
+.theme-dark .root_bfe55a.idle_bfe55a {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .wrapper_cb9592,
+.theme-dark .noChat_cb9592 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .chat_f75fb0,
+.theme-dark .content_f75fb0 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Tile — acrylic nhẹ */
+.theme-dark .tile__2f4f7 {
+  background: rgba(255, 255, 255, 0.0512) !important;
+  background-color: rgba(255, 255, 255, 0.0512) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.theme-dark .tile__2f4f7 .background_fb62e2 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .gradientContainer_bfe55a,
+.theme-dark .videoControls_bfe55a {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Voice Chat Panel — Blur xám đậm
+ * ========================================================= */
+
+/* Xoá nền tất cả layer cha */
+.theme-dark .chatLayerWrapper__01ae2 {
+  background: transparent !important;
+}
+
+.theme-dark .chatTarget__01ae2.container__01ae2 {
+  background: transparent !important;
+}
+
+/* Container chính */
+.theme-dark .chatLayerWrapper__01ae2 > .container__01ae2:not(.chatTarget__01ae2) {
+  background: rgba(32, 32, 32, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+/* Header thanh tiêu đề kênh */
+.theme-dark .chatLayerWrapper__01ae2 .container__9293f.themed__9293f {
+  background: rgba(22, 22, 22, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Vùng chat */
+.theme-dark .chat_ee72fa,
+.theme-dark .chatContent_f75fb0,
+.theme-dark .messagesWrapper__36d07,
+.theme-dark .scroller__36d07 {
+  background: transparent !important;
+}
+
+/* Gradient dưới chat — ẩn */
+.theme-dark .chatGradient__36d07 {
+  display: none !important;
+}
+
+/* Form nhập tin nhắn */
+.theme-dark .chatLayerWrapper__01ae2 .form_f75fb0,
+.theme-dark .chatLayerWrapper__01ae2 .channelTextArea__74017,
+.theme-dark .chatLayerWrapper__01ae2 .channelBottomBarArea_f75fb0 {
+  background: transparent !important;
+}
+
+.theme-dark .chatLayerWrapper__01ae2 .scrollableContainer__74017 {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+}
+
+/* Divider ngày tháng */
+.theme-dark .chatLayerWrapper__01ae2 .divider__5126c.hasContent__5126c .content__908e2 {
+  background: rgba(32, 32, 32, 0.9) !important;
+}
+
+.theme-dark .chatLayerWrapper__01ae2 .divider__5126c {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Hover bar buttons */
+.theme-dark .chatLayerWrapper__01ae2 .popover_f84418 {
+  background: rgba(22, 22, 22, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 6px !important;
+}
+
+/* Embed */
+.theme-dark .chatLayerWrapper__01ae2 .embedFull__623de {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Resize handle */
+.theme-dark .resizeHandle__01ae2 {
+  background: transparent !important;
+}
