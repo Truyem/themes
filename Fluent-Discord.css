@@ -12026,9 +12026,23 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* --- Generic Popup/Modal Containers --- */
+/* Note: Wildcard selectors used for comprehensive coverage of Discord's frequently changing class names */
+/* This ensures future compatibility as Discord updates their UI class names */
 .theme-dark [class*="modal__"][class*="container"],
 .theme-dark [class*="popout"][class*="container"],
 .theme-dark [class*="popup"][class*="container"] {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* --- Specific Common Modals (Performance Optimized) --- */
+.theme-dark .modal__9a792,
+.theme-dark .modal_e44912,
+.theme-dark .modal_b0827a,
+.theme-dark .modal_b962dc {
   background-color: rgba(40, 40, 40, 0.4) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -12046,13 +12060,27 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   border-radius: 8px;
 }
 
+/* --- Specific Common Popovers (Performance Optimized) --- */
+.theme-dark .popover_f84418,
+.theme-dark .menu_dc52c6,
+.theme-dark .menu__088f7 {
+  background-color: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
 /* --- Layer Container for Overlays --- */
-.theme-dark [class*="layerContainer"] [class*="layer"] {
+.theme-dark .layerContainer__9a0d8 .layer_cd0de5,
+.theme-dark .layerContainer_cd0de5 {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
 /* --- Context Menu Blur --- */
+.theme-dark .menu_dc52c6,
+.theme-dark .contextMenu__73080,
 .theme-dark [class*="contextMenu"] {
   background-color: rgba(40, 40, 40, 0.4) !important;
   backdrop-filter: blur(16px);
@@ -12062,6 +12090,8 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* --- Tooltip Containers --- */
+.theme-dark .tooltip_feb1d0,
+.theme-dark .tooltip__87a1d,
 .theme-dark [class*="tooltip"] {
   background-color: rgba(40, 40, 40, 0.4) !important;
   backdrop-filter: blur(16px);
