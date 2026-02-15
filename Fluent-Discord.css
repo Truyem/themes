@@ -1944,9 +1944,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   border-radius: 8px;
 }
 
-.theme-dark .panels__5e434 .avatarWrapper__37e49 {
-  margin-right: 0;
-}
 
 .theme-dark .panels__5e434 .avatarWrapper__37e49:hover {
   background-color: transparent;
@@ -1956,9 +1953,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   gap: 4px;
 }
 
-.theme-dark .panels__5e434 .buttonSpace__37e49 {
-  margin-right: 0;
-}
 
 .theme-dark .panels__5e434 .button__67645 {
   background-color: rgba(255, 255, 255, 0.0605);
@@ -11746,4 +11740,427 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 
 .theme-dark .selectField__0edde:hover {
   background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Add spacing between the three panel sections */
+.theme-dark .panels__5e434 {
+  gap: 8px;
+}
+
+/* Or if you want more control over individual spacing: */
+
+/* Space below the activity panel (League of Legends) */
+.theme-dark .panel__5dec7.activityPanel__5e434 {
+  margin-bottom: 8px;
+}
+
+/* Space below the voice connection wrapper */
+.theme-dark .wrapper_e131a9 {
+  margin-bottom: 8px;
+}
+
+
+/* ===== PANELS: Bỏ nền chung + xoá thanh dọc ===== */
+.theme-dark .panels__5e434 {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 8px;
+}
+
+.theme-dark .panels__5e434::before,
+.theme-dark .panels__5e434::after {
+  display: none !important;
+}
+
+/* ===== Activity Panel (League of Legends) — Nền blur ===== */
+.theme-dark .panel__5dec7.activityPanel__5e434 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px !important;
+}
+
+/* ===== Voice Connection Wrapper — Nền blur ===== */
+.theme-dark .panels__5e434 .wrapper_e131a9 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px !important;
+}
+
+/* ===== Account Container — Nền blur ===== */
+.theme-dark .panels__5e434 .container__37e49 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  margin-top: 0 !important;
+}
+
+/* ===== Popup Chi tiết cuộc gọi thoại ===== */
+.theme-dark .container__50387 {
+  background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(117, 117, 117, 0.4);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark .container__50387 .tabs__50387 {
+  background: transparent;
+}
+
+.theme-dark .container__50387 .tabBarItem__50387.selected_aa8da2 {
+  background: transparent !important;
+}
+
+.theme-dark .container__50387 .graphContainer_effb26,
+.theme-dark .container__50387 .graphContainer_effb26 *,
+.theme-dark .container__50387 .graphContainer_effb26 canvas {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .container__50387 .separator_effb26 {
+  border-color: rgba(117, 117, 117, 0.4);
+}
+
+.theme-dark .container__50387 .popoutBottom_effb26 {
+  background: transparent;
+}
+
+/* ===== Popup Tìm kiếm ===== */
+.theme-dark .container__16eb0 {
+  background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(117, 117, 117, 0.4);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark .container__16eb0 .itemContainer__971b5 .item__971b5 {
+  border-radius: 4px;
+}
+
+.theme-dark .container__16eb0 .itemContainer__971b5 .item__971b5:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.theme-dark .container__16eb0 .itemContainer__971b5[aria-selected="true"] .item__971b5 {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+ * Voice Call Video Grid — Xoá hết nền đen
+ * ========================================================= */
+.theme-dark .videoGridWrapper_a21736 {
+  background: transparent !important;
+}
+
+.theme-dark .videoGrid_a21736 {
+  background: transparent !important;
+}
+
+.theme-dark .callContainer_cb9592 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .root_bfe55a {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .root_bfe55a.idle_bfe55a {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Wrapper chính của voice chat */
+.theme-dark .wrapper_cb9592 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .noChat_cb9592 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Chat area */
+.theme-dark .chat_f75fb0 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Content wrapper */
+.theme-dark .content_f75fb0 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Tile — acrylic nhẹ */
+.theme-dark .tile__2f4f7 {
+  background: rgba(255, 255, 255, 0.0512) !important;
+  background-color: rgba(255, 255, 255, 0.0512) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.theme-dark .tile__2f4f7 .background_fb62e2 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Video controls gradient */
+.theme-dark .gradientContainer_bfe55a {
+  background: transparent !important;
+}
+
+.theme-dark .videoControls_bfe55a {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Trang Nâng Cấp Máy Chủ (Server Boost) — Blur đồng bộ
+ * ========================================================= */
+.theme-dark .page__5e434 .container__89463 {
+  background: transparent !important;
+}
+
+.theme-dark .page__5e434 .container__89463 .toolbar__89463.container__9293f {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.theme-dark .page__5e434 .contentContainer__89463 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px 0 0 0;
+}
+
+.theme-dark .page__5e434 .powerupsContainer__89463 {
+  background: transparent !important;
+}
+
+/* Card Cấp (Level) */
+.theme-dark .container__5573a.card__823e1 {
+  background: rgba(255, 255, 255, 0.0512) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+.theme-dark .container__5573a.card__823e1:hover {
+  background: rgba(255, 255, 255, 0.0837) !important;
+}
+
+/* Card Đặc Quyền Bổ Sung */
+.theme-dark .parentContainer__5573a>.container__5573a {
+  background: rgba(255, 255, 255, 0.0512) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.theme-dark .parentContainer__5573a>.container__5573a:hover {
+  background: rgba(255, 255, 255, 0.0837) !important;
+}
+
+/* Sidebar Nâng Cấp */
+.theme-dark .sidebarContainer__89463 {
+  background: transparent !important;
+}
+
+.theme-dark .sidebarContainer__89463 .container__58c46 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+.theme-dark .sidebarContainer__89463 .container__3f864 {
+  background: rgba(255, 255, 255, 0.0419) !important;
+  border-radius: 4px;
+}
+
+.theme-dark .sidebarContainer__89463 .container__879ae {
+  background: rgba(255, 255, 255, 0.0512) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+.theme-dark .container__10ca6 {
+  background: transparent !important;
+}
+
+.theme-dark .sidebarContainer__89463 .shinyButton__6a443 {
+  background: rgba(255, 255, 255, 0.0605) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 4px;
+}
+
+.theme-dark .progressContainer__823e1 .progress__823e1 {
+  background: rgba(255, 255, 255, 0.0419) !important;
+}
+
+.theme-dark .boostProgressBackground__5573a {
+  background: rgba(255, 255, 255, 0.0512) !important;
+  border-radius: 50%;
+}
+
+/* =========================================================
+ * Trang Quest
+ * ========================================================= */
+.theme-dark .scroller__23746 {
+  background: transparent !important;
+}
+
+.theme-dark .bannerContainer__955a3 {
+  display: none !important;
+}
+
+/* =========================================================
+ * Trang Soundboard — Xoá thanh đen, cách âm thanh với tên,
+ * nút âm thanh blur
+ * ========================================================= */
+
+/* Xoá nền đen của section container */
+.theme-dark .sectionContainer__61424 {
+  background: transparent !important;
+  border: none !important;
+  margin-bottom: 12px;
+}
+
+/* Header server (tên server) — thêm khoảng cách phía dưới */
+.theme-dark .sectionHeader__61424 {
+  background: transparent !important;
+  margin-bottom: 8px;
+}
+
+/* Hàng âm thanh — thêm gap */
+.theme-dark .soundRow__61424 {
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* Nút âm thanh — blur + nền xám bán trong suốt */
+.theme-dark .soundButton__9be63 {
+  background: rgba(60, 60, 60, 0.5) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px !important;
+}
+
+.theme-dark .soundButton__9be63:hover {
+  background: rgba(80, 80, 80, 0.6) !important;
+}
+
+/* Nút thêm âm thanh — cũng blur */
+.theme-dark .soundAddButton_da9eb2 {
+  background: rgba(60, 60, 60, 0.5) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px !important;
+}
+
+/* Xoá thanh phân cách đen giữa các section */
+.theme-dark .sectionContainer__61424+.sectionContainer__61424 {
+  border-top: none !important;
+}
+
+/* =========================================================
+ * Upload Area trong Voice Chat — Blur
+ * ========================================================= */
+.theme-dark .uploadArea_f75fb0,
+.theme-dark .uploadArea_b78547 {
+  background: transparent !important;
+}
+
+.theme-dark .uploadDropModal_b78547 {
+  background: rgba(30, 30, 30, 0.7) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.theme-dark .bgScale_b78547 {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Voice Chat Panel (bảng chat bên phải khi voice) — Blur đậm
+ * ========================================================= */
+
+/* Container chính của chat panel voice */
+.theme-dark .chatLayerWrapper__01ae2 .container__01ae2 {
+  background: rgba(25, 25, 28, 0.85) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+/* Header kênh chat voice */
+.theme-dark .chatLayerWrapper__01ae2 .container__9293f.themed__9293f {
+  background: rgba(25, 25, 28, 0.9) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Khu vực tin nhắn */
+.theme-dark .chatLayerWrapper__01ae2 .chat_ee72fa,
+.theme-dark .chatLayerWrapper__01ae2 .chatContent_f75fb0,
+.theme-dark .chatLayerWrapper__01ae2 .messagesWrapper__36d07,
+.theme-dark .chatLayerWrapper__01ae2 .scroller__36d07 {
+  background: transparent !important;
+}
+
+/* Thanh nhập tin nhắn */
+.theme-dark .chatLayerWrapper__01ae2 .channelTextArea__74017 {
+  background: transparent !important;
+}
+
+.theme-dark .chatLayerWrapper__01ae2 .scrollableContainer__74017 {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+/* Form chat + content */
+.theme-dark .chatLayerWrapper__01ae2 .form_f75fb0,
+.theme-dark .chatLayerWrapper__01ae2 .channelBottomBarArea_f75fb0 {
+  background: transparent !important;
+}
+
+/* Gradient dưới chat — ẩn */
+.theme-dark .chatLayerWrapper__01ae2 .chatGradient__36d07 {
+  display: none !important;
 }
