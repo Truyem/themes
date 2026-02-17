@@ -2004,13 +2004,15 @@ html.theme-dark.app-focused .clickable_c99c29::before {
 
 /* --- User Panel (Bottom Bar) --- */
 .theme-dark .panels__5e434 {
-  /* Blur effects added in Enhanced Blur Effects section at end of file */
+  background-color: #282828;
+  border-radius: 4px;
 }
 
 .theme-dark .panels__5e434 .container__37e49 {
-  /* Blur effects added in Enhanced Blur Effects section at end of file */
+  background-color: transparent;
   height: 48px;
   margin-bottom: 0;
+  border-radius: 8px;
 }
 
 
@@ -12405,6 +12407,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 .theme-dark .chatLayerWrapper__01ae2 .chatGradient__36d07 {
   display: none !important;
 }
+<<<<<<< HEAD
 
 
 /* === áº¨n card "Support the Project" (Donate) === */
@@ -12953,3 +12956,5 @@ button.vc-settings-quickActions-pill:hover {
   -webkit-backdrop-filter: blur(8px);
   padding: 12px;
 }
+=======
+>>>>>>> 662051bf4f9410a1d98710158323cfd1890bc074
