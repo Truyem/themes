@@ -2,12 +2,12 @@
  * @name Fluent Discord
  * @author TakosThings
  * @version 1.12.1
- * @description Fluent theme for Discord (ðŸ”„ Auto-updating)
+ * @description Fluent theme for Discord (🔄 Auto-updating)
  * @source https://github.com/TakosThings/Fluent-Discord
 */
 
 /* =============================================================
- * Settings Panel Redesign â€” Acrylic Blur + Windows 11 Style
+ * Settings Panel Redesign — Acrylic Blur + Windows 11 Style
  * ============================================================= */
 
 /* --- Settings Modal Outer Container --- */
@@ -168,7 +168,7 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* XÃ³a hiá»‡u á»©ng gradient dÆ°á»›i thanh tÃ¬m kiáº¿m trong Settings sidebar */
+/* Xóa hiệu ứng gradient dưới thanh tìm kiếm trong Settings sidebar */
 .theme-dark .searchBarContainer__409aa::after,
 .theme-dark .searchBarContainer__409aa::before {
   display: none !important;
@@ -211,7 +211,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Close button (X) â€” Win 11 style */
+/* Close button (X) — Win 11 style */
 .theme-dark .contentHeader_e9e3ed .button_a22cb0.icon-only_a22cb0 {
   border-radius: 4px;
   width: 32px;
@@ -453,7 +453,7 @@
   background: transparent !important;
 }
 
-/* --- Heading Cards (e.g. "á»¨ng dá»¥ng") --- */
+/* --- Heading Cards (e.g. "Ứng dụng") --- */
 .theme-dark .headingCard__50a54 {
   background: rgba(255, 255, 255, 0.03) !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
@@ -574,10 +574,12 @@
   line-height: 18px !important;
 }
 
-/* Reduce fieldset gap for keybinds page */
+/* Reduce fieldset gap for keybinds page - removed to fix Security page spacing */
+/*
 .theme-dark .fieldset__7fb92 .stack_dbd263 {
   gap: 0px !important;
 }
+*/
 
 .theme-dark .fieldset__7fb92 .description__7fb92 {
   color: rgba(255, 255, 255, 0.5) !important;
@@ -776,8 +778,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   font-family: var(--font-primary);
 }
 
-
-/* --- Wrapper / Misc Components --- */
 .theme-dark .wrapper_f61d60 {
   background-color: transparent;
   color: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 25%));
@@ -840,8 +840,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   text-transform: none;
 }
 
-
-/* --- Tab Bar --- */
 .theme-dark .tabBar__0b563,
 .theme-dark .tabBar_b9fccc,
 .theme-dark .tabBar_d6f9e9,
@@ -948,8 +946,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   color: rgba(255, 255, 255, 0.786);
 }
 
-
-/* --- Layout Containers --- */
 .theme-dark .sidebar__5e434,
 .theme-dark .container__2637a {
   background-color: transparent;
@@ -979,8 +975,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   background-blend-mode: color, luminosity;
 }
 
-
-/* --- Buttons --- */
 .theme-dark .button__201d5 {
   border-radius: 4px;
   font-feature-settings: "rclt" 0;
@@ -1216,8 +1210,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   background-color: rgba(255, 255, 255, 0.0419);
 }
 
-
-/* --- Context Menu --- */
 .theme-dark .menu_c1e9c4 {
   min-width: 280px;
   background: rgba(32, 32, 32, 0.6) !important;
@@ -1411,8 +1403,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   color: rgba(255, 255, 255, 0.786);
 }
 
-
-/* --- Toggle / Switch --- */
 .theme-dark .container__3f21e {
   background-color: transparent !important;
   border: 0;
@@ -1464,8 +1454,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   transition: left 187ms cubic-bezier(0.55, 0.55, 0, 1);
 }
 
-
-/* --- Checkbox --- */
 .theme-dark .checkboxWrapper_f525d3 .input_f525d3,
 .theme-dark .checkboxWrapper_f525d3 .box_f525d3 {
   width: 18px;
@@ -1549,8 +1537,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   background-color: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 25%));
 }
 
-
-/* --- Text Input / Message Input --- */
 .theme-dark .inputContainer__9b8f6 .emojiButtonContainer__9b8f6 {
   right: 0;
   left: unset;
@@ -1617,8 +1603,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   padding-left: 32px !important;
 }
 
-
-/* --- Select Dropdown --- */
 .theme-dark .select__3f413 {
   padding: 3px 8px 3px 12px;
   background-color: rgba(255, 255, 255, 0.0605);
@@ -1682,8 +1666,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   display: none;
 }
 
-
-/* --- Voice Connected Panel --- */
 .theme-dark .container_f89b2c {
   height: 32px;
   background-color: rgba(255, 255, 255, 0.0605);
@@ -1742,8 +1724,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   margin-top: 2px;
 }
 
-
-/* --- Toolbar / Header Bar --- */
 .theme-dark .toolbar_bba883 {
   padding: 4px;
   background: linear-gradient(0deg, rgba(44, 44, 44, 0.15), rgba(44, 44, 44, 0.15)), rgba(44, 44, 44, 0.96);
@@ -1807,8 +1787,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   color: rgba(var(--fluent-text-on-accent-color), 100%);
 }
 
-
-/* --- Scrollbar --- */
 .theme-dark .thin_d125d2::-webkit-scrollbar,
 .theme-dark .thin__99f8c::-webkit-scrollbar {
   width: 6px;
@@ -1851,8 +1829,6 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
   background-color: rgba(255, 255, 255, 0.5442);
 }
 
-
-/* --- Search Bar --- */
 .theme-dark .bar_c38106 .title_c38106 {
   justify-content: flex-start;
   left: 8px;
@@ -1939,10 +1915,8 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   --custom-app-top-bar-height: calc(20px + var(--space-sm));
 }
 
-
-/* --- Tooltip --- */
 /* =========================================================
- * Tooltip Styling â€” Acrylic Blur (Pseudo-element Method)
+ * Tooltip Styling — Acrylic Blur (Pseudo-element Method)
  * ========================================================= */
 .theme-dark .tooltip_c36707,
 .tooltip__4e35b {
@@ -2001,18 +1975,14 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   z-index: 1;
 }
 
-
-/* --- User Panel (Bottom Bar) --- */
 .theme-dark .panels__5e434 {
-  background-color: #282828;
-  border-radius: 4px;
+  /* Blur effects added in Enhanced Blur Effects section at end of file */
 }
 
 .theme-dark .panels__5e434 .container__37e49 {
-  background-color: transparent;
+  /* Blur effects added in Enhanced Blur Effects section at end of file */
   height: 48px;
   margin-bottom: 0;
-  border-radius: 8px;
 }
 
 
@@ -2070,8 +2040,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   color: #FF99A4;
 }
 
-
-/* --- Channel Sidebar --- */
 .theme-dark .sidebar__5e434::after {
   display: none;
 }
@@ -2132,8 +2100,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   display: none;
 }
 
-
-/* --- Channel List Items --- */
 .theme-dark .container_eff079 {
   display: none;
 }
@@ -2386,8 +2352,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   left: 40px;
 }
 
-
-/* --- Badges / Unread Indicators --- */
 .theme-dark .numberBadge__2b1f5 {
   background-color: #FF99A4 !important;
   font-size: 12px;
@@ -2414,8 +2378,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   text-transform: none;
 }
 
-
-/* --- Voice Channel --- */
 .theme-dark .container_e131a9 {
   background-color: transparent;
   border-top: 0;
@@ -2530,8 +2492,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   display: none;
 }
 
-
-/* --- Activity Panel --- */
 .theme-dark .activityPanel__5e434 {
   background-color: transparent;
   padding-bottom: 0;
@@ -2547,8 +2507,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   line-height: 20px;
 }
 
-
-/* --- User Panel Button Icons --- */
 html[lang^=en-].theme-dark .panels__5e434 .button__201d5[aria-label]::before {
   font-family: "Segoe Fluent Icons", "Segoe MDL2 Assets";
   font-size: 16px;
@@ -2566,8 +2524,6 @@ html[lang^=en-].theme-dark .panels__5e434 .button__201d5[aria-label] .contents__
   font-weight: 500;
 }
 
-
-/* --- Autocomplete --- */
 .theme-dark .channelTextArea_f75fb0:focus-within .autocomplete__13533 {
   border-color: rgba(255, 255, 255, 0.0698);
 }
@@ -2700,8 +2656,6 @@ html[lang^=en-].theme-dark .panels__5e434 .button__201d5[aria-label] .contents__
   color: rgba(255, 255, 255, 0.5442);
 }
 
-
-/* --- Channel Header --- */
 .theme-dark .header__0b563 {
   background: transparent !important;
 }
@@ -2768,8 +2722,6 @@ html[lang^=en-].theme-dark .panels__5e434 .button__201d5[aria-label] .contents__
   display: block;
 }
 
-
-/* --- Thread / Forum --- */
 .theme-dark .page_c791b2 {
   background-color: transparent !important;
 }
@@ -2807,8 +2759,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   display: none;
 }
 
-
-/* --- Chat Area --- */
 .theme-dark .chat_f75fb0 {
   background: transparent;
   border-top: 0;
@@ -2871,8 +2821,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   padding-bottom: 0;
 }
 
-
-/* --- Reactions --- */
 .theme-dark .reaction__23977,
 .theme-dark .reactionBtn__23977 {
   background-color: rgba(255, 255, 255, 0.0605);
@@ -2926,8 +2874,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   color: rgba(255, 255, 255, 0.3628);
 }
 
-
-/* --- Messages / Mentions --- */
 .theme-dark .message__5126c.mentioned__5126c {
   background-color: #433519;
 }
@@ -2982,8 +2928,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   border-radius: 0 8px 8px 0 !important;
 }
 
-
-/* --- Code Blocks --- */
 .theme-dark .markup__75297 code {
   background-color: rgba(58, 58, 58, 0.3);
 }
@@ -2992,8 +2936,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   display: var(--fluent-show-nitro-decorations);
 }
 
-
-/* --- Welcome Screen --- */
 .theme-dark .container__00de6 {
   align-items: flex-start;
   padding: 0;
@@ -3054,8 +2996,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   display: none;
 }
 
-
-/* --- Chat Gradient / Background --- */
 .theme-dark .wrapper_d852db,
 .theme-dark .wrapper_fc8177 {
   background: transparent;
@@ -3069,8 +3009,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   height: 16px;
 }
 
-
-/* --- Message Form / Text Area --- */
 .theme-dark .form_f75fb0 {
   margin-top: 0;
   padding-left: 17px;
@@ -3276,8 +3214,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   display: none;
 }
 
-
-/* --- Typing Indicator --- */
 .theme-dark .inTextChannel_b88801.base_b88801 {
   right: 16px;
   left: unset;
@@ -3331,8 +3267,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   padding: 15px 0;
 }
 
-
-/* --- Message Action Bar --- */
 .theme-dark .wrapper__44df5 {
   height: 40px;
   margin: 0 0 8px 0;
@@ -3401,8 +3335,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   background-color: transparent;
 }
 
-
-/* --- Friends / Home Page --- */
 .theme-dark .container_f369db {
   background-color: rgba(58, 58, 58, 0.3);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -3485,8 +3417,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   border: 0;
 }
 
-
-/* --- Search Results --- */
 .theme-dark .searchResultsWrap_a9e706 {
   background-color: rgba(58, 58, 58, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
@@ -3560,8 +3490,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   background-color: rgba(255, 255, 255, 0.0419);
 }
 
-
-/* --- Thread Panel --- */
 .theme-dark .container__01ae2 {
   background-color: transparent;
   border-radius: 0;
@@ -3687,8 +3615,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   border-radius: 0;
 }
 
-
-/* --- File Attachments --- */
 .theme-dark .fileWrapper__0ccae {
   width: 400px;
   position: relative;
@@ -3756,8 +3682,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   font-weight: normal;
 }
 
-
-/* --- Embed Cards --- */
 .theme-dark .wrapper_d5f3cd {
   width: 400px;
   background-color: rgba(255, 255, 255, 0.0512);
@@ -3835,8 +3759,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   height: 32px;
 }
 
-
-/* --- Audio / Video Controls --- */
 .theme-dark .audioControls_f316dd,
 .theme-dark .videoControls_f316dd {
   height: 48px;
@@ -3942,8 +3864,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   display: none;
 }
 
-
-/* --- Rich Embeds --- */
 .theme-dark .embedFull__623de {
   background-color: rgba(255, 255, 255, 0.0512);
 }
@@ -3970,8 +3890,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   line-height: 20px;
 }
 
-
-/* --- Invite Embeds --- */
 .theme-dark .invite__4d3fa {
   background-color: rgba(255, 255, 255, 0.0512);
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -4020,8 +3938,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   text-align: center;
 }
 
-
-/* --- Text Container / Footer --- */
 .theme-dark .textContainer__4d95d {
   background-color: rgba(255, 255, 255, 0.0512);
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -4049,8 +3965,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   border-radius: 8px;
 }
 
-
-/* --- Guild / Server Bar --- */
 .theme-dark .guilds__5e434 {
   width: 60px;
   background-color: transparent;
@@ -4266,8 +4180,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   background-color: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 20%));
 }
 
-
-/* --- Guild List Items --- */
 .theme-dark .listItem__650eb {
   width: 44px;
   margin-left: 8px;
@@ -4370,8 +4282,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   display: none;
 }
 
-
-/* --- Guild Add / Discover Buttons --- */
 .theme-dark .circleIconButton__5bc7e {
   background-color: transparent;
   color: #FFF;
@@ -4394,8 +4304,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   font-weight: 400;
 }
 
-
-/* --- Guild Folders --- */
 .theme-dark .folderGroup__48112 {
   width: 52px;
 }
@@ -4500,8 +4408,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   content: "\eddb";
 }
 
-
-/* --- Member List --- */
 .theme-dark .container_c8ffbb {
   background: rgba(58, 58, 58, 0.45);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
@@ -4590,8 +4496,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   display: var(--fluent-show-nitro-decorations);
 }
 
-
-/* --- Search Popout --- */
 .theme-dark .chat_f75fb0 .search__49676 {
   margin: 0 4px 0 0;
 }
@@ -4712,8 +4616,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
   transform: rotateZ(90deg);
 }
 
-
-/* --- Header Title Bar --- */
 .theme-dark .title_f75fb0,
 .theme-dark .container__9293f {
   padding: 0 0 0 8px;
@@ -4844,8 +4746,6 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f .controlIcon-35oS
   display: none;
 }
 
-
-/* --- Header Toolbar Buttons --- */
 .theme-dark .wrapper_cb9592 {
   background-color: #000;
   border-radius: 8px 0 0 0;
@@ -4942,8 +4842,6 @@ html[lang^=en-].theme-dark .wrapper__1405b .button__201d5[aria-label] svg {
   display: none;
 }
 
-
-/* --- Now Playing / Activity --- */
 .theme-dark .nowPlayingColumn__133bf {
   background: transparent;
 }
@@ -4998,8 +4896,6 @@ html[lang^=en-].theme-dark .wrapper__1405b .button__201d5[aria-label] svg {
   text-align: left;
 }
 
-
-/* --- DM / Private Channels --- */
 .theme-dark .privateChannels_e6b769 .scroller__99e7c {
   margin-bottom: 64px;
 }
@@ -5083,8 +4979,6 @@ html[lang^=en-].theme-dark .wrapper__1405b .button__201d5[aria-label] svg {
   text-transform: none;
 }
 
-
-/* --- Profile Panel --- */
 .theme-dark .profilePanel_b433b4 .userProfileOuterUnthemed_c69a7b {
   background-color: transparent;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
@@ -5135,8 +5029,6 @@ html[lang^=en-].theme-dark .wrapper__1405b .button__201d5[aria-label] svg {
   background-color: transparent;
 }
 
-
-/* --- Friends List --- */
 .theme-dark .container__133bf {
   border-top: 0;
 }
@@ -5306,8 +5198,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
-
-/* --- Guild Discovery --- */
 .theme-dark .discoverHeader_b992d4 {
   font-feature-settings: "fina" 1, "init" 1;
   font-size: 14px;
@@ -5408,8 +5298,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
-
-/* --- Guild Discovery Header --- */
 .theme-dark .header_e37a20 {
   font-size: 20px;
   font-weight: 600;
@@ -5478,8 +5366,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   color: #FFF;
 }
 
-
-/* --- Loading Screen --- */
 .theme-dark .container_a2f514 {
   padding-top: 32px;
   top: -32px;
@@ -5661,8 +5547,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   color: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 25%));
 }
 
-
-/* --- Create DM / Group DM --- */
 .theme-dark .root__52f07 {
   margin-top: 0;
   background-color: transparent;
@@ -6085,8 +5969,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   background-color: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 20%));
 }
 
-
-/* --- Report / Feedback Modal --- */
 .theme-dark .header__6c12c {
   font-size: 20px;
   font-weight: 600;
@@ -6112,8 +5994,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   line-height: 20px;
 }
 
-
-/* --- Modals / Dialogs --- */
 .theme-dark .modal_b0827a {
   border: 0 !important;
 }
@@ -6244,8 +6124,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   margin-left: 8px;
 }
 
-
-/* --- Art / Illustrations --- */
 .theme-dark .art_e1cc86 {
   display: none;
 }
@@ -6315,8 +6193,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   margin: 32px 0 0 0;
 }
 
-
-/* --- Quickswitcher --- */
 .theme-dark .quickswitcher_ac6cb0 {
   height: 100%;
   background-color: #202020;
@@ -6493,8 +6369,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   color: rgba(255, 255, 255, 0.786);
 }
 
-
-/* --- Create Guild / Server --- */
 .theme-dark .art_e1cc86 {
   display: none;
 }
@@ -6587,8 +6461,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   background-color: transparent;
 }
 
-
-/* --- Guild Sidebar Settings --- */
 .theme-dark .guildSidebar_b962dc {
   background: #202020;
 }
@@ -6656,8 +6528,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   background-color: #202020 !important;
 }
 
-
-/* --- Sticker Picker --- */
 .theme-dark .container_d9c882 {
   background-color: transparent;
 }
@@ -6695,8 +6565,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   margin-top: 24px;
 }
 
-
-/* --- GIF Picker --- */
 .theme-dark .container__6764b {
   height: auto;
   padding: 12px;
@@ -6736,8 +6604,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   background-color: transparent;
 }
 
-
-/* --- Expression Picker Header --- */
 .theme-dark .header_a8217b {
   height: unset;
   min-height: unset;
@@ -6749,8 +6615,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
-
-/* --- User Profile Modal --- */
 .theme-dark .user-profile-modal-v2 {
   background-color: transparent;
   border: 0;
@@ -6858,8 +6722,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   background-color: transparent;
 }
 
-
-/* --- User Popout Menu --- */
 .theme-dark .userPopoutOuter_c69a7b .menu_c1e9c4.menu_ad5fac {
   background-color: transparent;
   border: 0;
@@ -6878,8 +6740,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
-
-/* --- User Activity / Spotify --- */
 .theme-dark .container__56cd1 {
   background: #1C1C1C;
   backdrop-filter: blur(16px);
@@ -6955,8 +6815,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   color: rgba(var(--fluent-text-on-accent-color), 100%);
 }
 
-
-/* --- Stream Preview --- */
 .theme-dark .streamPreview__6da2d {
   background: #1C1C1C;
   backdrop-filter: blur(16px);
@@ -6973,8 +6831,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
-
-/* --- Go Live / Screen Share --- */
 .theme-dark .contentWrapper__08434,
 .theme-dark #emoji-picker-tab-panel {
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8));
@@ -7013,8 +6869,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   color: rgba(255, 255, 255, 0.786);
 }
 
-
-/* --- Emoji Picker --- */
 .theme-dark .emojiPickerHasTabWrapper_c0e32c .header_c0e32c {
   padding: 0 12px 12px;
 }
@@ -7146,7 +7000,7 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .categoryItemDefaultCategory_b9ee0c.categoryItem_b9ee0c[aria-label=flags]::before {
-  content: "Ã°Å¸ÂÂ³Ã¢â‚¬ÂÃ°Å¸Å’Ë†";
+  content: "ðŸ³â€ðŸŒˆ";
   font-feature-settings: "rclt" 0;
   font-size: 14px;
   font-style: normal;
@@ -7154,8 +7008,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   line-height: 20px;
 }
 
-
-/* --- Emoji Inspector --- */
 .theme-dark .inspector_aeaaeb {
   background-color: #1C1C1C;
 }
@@ -7213,8 +7065,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   margin: 3px;
 }
 
-
-/* --- Nitro Promo --- */
 .theme-dark .premiumPromo__3a1b6 {
   background-color: #1C1C1C;
 }
@@ -7239,8 +7089,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   color: #FFF;
 }
 
-
-/* --- Recent Mentions Popout --- */
 .theme-dark .recentMentionsPopout__95796 {
   max-height: calc(100vh - 32px - 48px - 16px) !important;
   margin: 8px;
@@ -7365,8 +7213,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   background-color: rgba(255, 255, 255, 0.0419);
 }
 
-
-/* --- Noise Cancellation Popout --- */
 .theme-dark .noiseCancellationPopout_e131a9 {
   background-color: #202020;
   border: 1px solid rgba(117, 117, 117, 0.4);
@@ -7400,8 +7246,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   line-height: 20px;
 }
 
-
-/* --- Messages Popout --- */
 .theme-dark .messagesPopoutWrap_e8b59c {
   max-height: calc(100vh - 32px - 48px - 12px) !important;
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8));
@@ -7449,8 +7293,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
-
-/* --- Quick Select Popout --- */
 .theme-dark .quickSelectPopout_ebaca5 {
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8));
   backdrop-filter: blur(16px);
@@ -7503,8 +7345,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   text-align: left;
 }
 
-
-/* --- User Popout / Profile Card --- */
 .theme-dark .container__3dde2 {
   background-color: #202020;
   border: 1px solid rgba(117, 117, 117, 0.4);
@@ -7769,8 +7609,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   transform: rotate(45deg);
 }
 
-
-/* --- Date Picker --- */
 .theme-dark .picker__09f65 {
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8));
   backdrop-filter: blur(16px);
@@ -7867,8 +7705,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   line-height: 20px;
 }
 
-
-/* --- Server Discovery Browser --- */
 .theme-dark .browser_d98031 {
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8));
   backdrop-filter: blur(16px);
@@ -7931,8 +7767,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   color: rgba(255, 255, 255, 0.786);
 }
 
-
-/* --- User Popout Outer --- */
 .theme-dark .userPopoutOuter_c69a7b {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
 }
@@ -8013,8 +7847,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
-
-/* --- Settings Content Region --- */
 .theme-dark .layer__960e4 .contentRegion__23e6b {
   background-color: rgba(58, 58, 58, 0.3);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -8123,8 +7955,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   animation: fluent-layer-transition 250ms cubic-bezier(0, 0, 0, 1);
 }
 
-
-/* --- Settings Sidebar Region --- */
 .theme-dark .sidebarRegion__23e6b {
   flex: 0;
 }
@@ -8235,8 +8065,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   line-height: 16px;
 }
 
-
-/* --- Server Settings Pages --- */
 .theme-dark .contentColumn__23e6b#permissions-tab .title_b717a1 {
   font-size: 28px;
   font-weight: 600;
@@ -9050,8 +8878,6 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   filter: unset;
 }
 
-
-/* --- Friends List Button Icons --- */
 html[lang^=en-].theme-dark .peopleList__5ec2f [aria-label=Message]::before {
   content: "\e8bd";
 }
@@ -9086,8 +8912,6 @@ html[lang^=en-].theme-dark .peopleList__5ec2f [aria-label=Cancel]::before {
   }
 }
 
-
-/* --- User Panel Voice Icons --- */
 html[lang^=en-].theme-dark .panels__5e434 .button__201d5[aria-label=Deafen][aria-checked=true]::before {
   content: "\e74f";
 }
@@ -9238,8 +9062,6 @@ html[lang^=en-].theme-dark .wrapper__1405b .button__201d5[aria-label^=Return]::b
   content: "\f71a";
 }
 
-
-/* --- Message Action Icons --- */
 html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label=Reply]::before {
   content: "\e97a";
 }
@@ -9321,8 +9143,6 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label=Forward]::b
   content: "\e72a";
 }
 
-
-/* --- Toolbar Icons --- */
 html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label=Threads]::before {
   content: "\e8c4";
 }
@@ -9429,8 +9249,6 @@ html[lang^=en-].theme-dark .toolbar__9293f .button__201d5[aria-label^="Show Chat
   content: "\e8a0";
 }
 
-
-/* --- Context Menu Icons --- */
 .theme-dark .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-My_Account]::before {
   content: "\e77b";
 }
@@ -10407,8 +10225,6 @@ html[lang^=en-].theme-dark .toolbar__9293f .button__201d5[aria-label^="Show Chat
   display: none;
 }
 
-
-/* --- Syntax Highlighting (hljs) --- */
 .theme-dark .hljs {
   display: block;
   overflow-x: auto;
@@ -10591,8 +10407,6 @@ div[id^=bd-floating-window-] #bd-editor-controls,
   text-align: left;
 }
 
-
-/* --- Game Activity Panel Button --- */
 html[lang^=en-].theme-dark .panels__5e434 .button__67645[aria-label="Disable Game Activity"]::before {
   content: "\e7fc";
 }
@@ -10606,8 +10420,6 @@ html[lang^=en-].theme-dark .panels__5e434 .button__67645[aria-label="Enable Game
   content: "\e7fc";
 }
 
-
-/* --- Timeline / Activity Status --- */
 .theme-dark .container_6sXIoE.withTimeline_824fT_ {
   border-bottom: 0;
 }
@@ -10644,8 +10456,6 @@ html[lang^=en-].theme-dark .panels__5e434 .button__67645[aria-label="Enable Game
   margin-left: 2px !important;
 }
 
-
-/* --- Guild Frame Effects --- */
 .theme-dark .listItem__650eb.frame_oXWS21:active {
   transform: none;
 }
@@ -10665,8 +10475,6 @@ html[lang^=en-].theme-dark .panels__5e434 .button__67645[aria-label="Enable Game
   display: none !important;
 }
 
-
-/* --- FakeMessage Plugin --- */
 .theme-dark .buttonContainer__74017.fm-buttonContainer {
   align-items: flex-start;
 }
@@ -10713,8 +10521,6 @@ html[lang^=en-].theme-dark .panels__5e434 .button__67645[aria-label="Enable Game
   content: "\e189";
 }
 
-
-/* --- Toolbar Special Icons --- */
 html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f.cursorPointer_B3uwDA::before {
   content: "\e70b";
 }
@@ -10760,8 +10566,6 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f.cursorPointer_B3u
   color: #FFF;
 }
 
-
-/* --- InvisibleTyping Plugin --- */
 .theme-dark .invisible-typing-button {
   width: 32px;
   height: 32px;
@@ -10813,8 +10617,6 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f.cursorPointer_B3u
   display: none;
 }
 
-
-/* --- Translate Plugin --- */
 .theme-dark .translateButton_DhP9x8 {
   width: 32px;
   height: 32px;
@@ -10845,8 +10647,6 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f.cursorPointer_B3u
   --settingsbackground_v: #282828 !important;
 }
 
-
-/* --- Bot Tags --- */
 .theme-dark .botTag__5d473[style],
 .theme-dark .botTag_c19a55[style] {
   padding: 0 4px !important;
@@ -10875,8 +10675,6 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f.cursorPointer_B3u
   color: #b5bac1;
 }
 
-
-/* --- Keyword Notify Plugin --- */
 html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keyword Matches"] .icon__9293f {
   display: block;
 }
@@ -11398,7 +11196,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* =============================================================
- * Settings Panel Redesign â€” Acrylic Blur + Windows 11 Style
+ * Settings Panel Redesign — Acrylic Blur + Windows 11 Style
  * ============================================================= */
 
 /* --- Settings Modal Outer Container --- */
@@ -11558,7 +11356,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* XÃ³a hiá»‡u á»©ng gradient dÆ°á»›i thanh tÃ¬m kiáº¿m trong Settings sidebar */
+/* Xóa hiệu ứng gradient dưới thanh tìm kiếm trong Settings sidebar */
 .theme-dark .searchBarContainer__409aa::after,
 .theme-dark .searchBarContainer__409aa::before {
   display: none !important;
@@ -11601,7 +11399,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Close button (X) â€” Win 11 style */
+/* Close button (X) — Win 11 style */
 .theme-dark .contentHeader_e9e3ed .button_a22cb0.icon-only_a22cb0 {
   border-radius: 4px;
   width: 32px;
@@ -11843,7 +11641,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* =============================================================
- * Search Popout Redesign â€” Acrylic Blur
+ * Search Popout Redesign — Acrylic Blur
  * ============================================================= */
 
 /* Main Search Dropdown Container */
@@ -12003,7 +11801,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 
-/* ===== PANELS: Bá» ná»n chung + xoÃ¡ thanh dá»c ===== */
+/* ===== PANELS: Bỏ nền chung + xoá thanh dọc ===== */
 .theme-dark .panels__5e434 {
   background-color: transparent !important;
   background: transparent !important;
@@ -12017,7 +11815,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   display: none !important;
 }
 
-/* ===== Activity Panel (League of Legends) â€” Ná»n blur ===== */
+/* ===== Activity Panel (League of Legends) — Nền blur ===== */
 .theme-dark .panel__5dec7.activityPanel__5e434 {
   background: rgba(40, 40, 40, 0.4) !important;
   backdrop-filter: blur(16px);
@@ -12028,7 +11826,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   margin-bottom: 8px !important;
 }
 
-/* ===== Voice Connection Wrapper â€” Ná»n blur ===== */
+/* ===== Voice Connection Wrapper — Nền blur ===== */
 .theme-dark .panels__5e434 .wrapper_e131a9 {
   background: rgba(40, 40, 40, 0.4) !important;
   backdrop-filter: blur(16px);
@@ -12039,7 +11837,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   margin-bottom: 8px !important;
 }
 
-/* ===== Account Container â€” Ná»n blur ===== */
+/* ===== Account Container — Nền blur ===== */
 .theme-dark .panels__5e434 .container__37e49 {
   background: rgba(40, 40, 40, 0.4) !important;
   backdrop-filter: blur(16px);
@@ -12049,7 +11847,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   margin-top: 0 !important;
 }
 
-/* ===== Popup Chi tiáº¿t cuá»™c gá»i thoáº¡i ===== */
+/* ===== Popup Chi tiết cuộc gọi thoại ===== */
 .theme-dark .container__50387 {
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)) !important;
   backdrop-filter: blur(16px);
@@ -12082,7 +11880,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background: transparent;
 }
 
-/* ===== Popup TÃ¬m kiáº¿m ===== */
+/* ===== Popup Tìm kiếm ===== */
 .theme-dark .container__16eb0 {
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)) !important;
   backdrop-filter: blur(16px);
@@ -12105,7 +11903,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* =========================================================
- * Voice Call Video Grid â€” XoÃ¡ háº¿t ná»n Ä‘en
+ * Voice Call Video Grid — Xoá hết nền đen
  * ========================================================= */
 .theme-dark .videoGridWrapper_a21736 {
   background: transparent !important;
@@ -12130,7 +11928,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background-color: transparent !important;
 }
 
-/* Wrapper chÃ­nh cá»§a voice chat */
+/* Wrapper chính của voice chat */
 .theme-dark .wrapper_cb9592 {
   background: transparent !important;
   background-color: transparent !important;
@@ -12153,7 +11951,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background-color: transparent !important;
 }
 
-/* Tile â€” acrylic nháº¹ */
+/* Tile — acrylic nhẹ */
 .theme-dark .tile__2f4f7 {
   background: rgba(255, 255, 255, 0.0512) !important;
   background-color: rgba(255, 255, 255, 0.0512) !important;
@@ -12177,7 +11975,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* =========================================================
- * Trang NÃ¢ng Cáº¥p MÃ¡y Chá»§ (Server Boost) â€” Blur Ä‘á»“ng bá»™
+ * Trang Nâng Cấp Máy Chủ (Server Boost) — Blur đồng bộ
  * ========================================================= */
 .theme-dark .page__5e434 .container__89463 {
   background: transparent !important;
@@ -12201,7 +11999,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background: transparent !important;
 }
 
-/* Card Cáº¥p (Level) */
+/* Card Cấp (Level) */
 .theme-dark .container__5573a.card__823e1 {
   background: rgba(255, 255, 255, 0.0512) !important;
   backdrop-filter: blur(12px);
@@ -12214,7 +12012,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background: rgba(255, 255, 255, 0.0837) !important;
 }
 
-/* Card Äáº·c Quyá»n Bá»• Sung */
+/* Card Đặc Quyền Bổ Sung */
 .theme-dark .parentContainer__5573a>.container__5573a {
   background: rgba(255, 255, 255, 0.0512) !important;
   backdrop-filter: blur(12px);
@@ -12228,7 +12026,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background: rgba(255, 255, 255, 0.0837) !important;
 }
 
-/* Sidebar NÃ¢ng Cáº¥p */
+/* Sidebar Nâng Cấp */
 .theme-dark .sidebarContainer__89463 {
   background: transparent !important;
 }
@@ -12285,30 +12083,30 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* =========================================================
- * Trang Soundboard â€” XoÃ¡ thanh Ä‘en, cÃ¡ch Ã¢m thanh vá»›i tÃªn,
- * nÃºt Ã¢m thanh blur
+ * Trang Soundboard — Xoá thanh đen, cách âm thanh với tên,
+ * nút âm thanh blur
  * ========================================================= */
 
-/* XoÃ¡ ná»n Ä‘en cá»§a section container */
+/* Xoá nền đen của section container */
 .theme-dark .sectionContainer__61424 {
   background: transparent !important;
   border: none !important;
   margin-bottom: 12px;
 }
 
-/* Header server (tÃªn server) â€” thÃªm khoáº£ng cÃ¡ch phÃ­a dÆ°á»›i */
+/* Header server (tên server) — thêm khoảng cách phía dưới */
 .theme-dark .sectionHeader__61424 {
   background: transparent !important;
   margin-bottom: 8px;
 }
 
-/* HÃ ng Ã¢m thanh â€” thÃªm gap */
+/* Hàng âm thanh — thêm gap */
 .theme-dark .soundRow__61424 {
   gap: 8px;
   margin-bottom: 8px;
 }
 
-/* NÃºt Ã¢m thanh â€” blur + ná»n xÃ¡m bÃ¡n trong suá»‘t */
+/* Nút âm thanh — blur + nền xám bán trong suốt */
 .theme-dark .soundButton__9be63 {
   background: rgba(60, 60, 60, 0.5) !important;
   backdrop-filter: blur(12px);
@@ -12321,7 +12119,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background: rgba(80, 80, 80, 0.6) !important;
 }
 
-/* NÃºt thÃªm Ã¢m thanh â€” cÅ©ng blur */
+/* Nút thêm âm thanh — cũng blur */
 .theme-dark .soundAddButton_da9eb2 {
   background: rgba(60, 60, 60, 0.5) !important;
   backdrop-filter: blur(12px);
@@ -12330,13 +12128,13 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   border-radius: 8px !important;
 }
 
-/* XoÃ¡ thanh phÃ¢n cÃ¡ch Ä‘en giá»¯a cÃ¡c section */
+/* Xoá thanh phân cách đen giữa các section */
 .theme-dark .sectionContainer__61424+.sectionContainer__61424 {
   border-top: none !important;
 }
 
 /* =========================================================
- * Upload Area trong Voice Chat â€” Blur
+ * Upload Area trong Voice Chat — Blur
  * ========================================================= */
 .theme-dark .uploadArea_f75fb0,
 .theme-dark .uploadArea_b78547 {
@@ -12356,10 +12154,10 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* =========================================================
- * Voice Chat Panel (báº£ng chat bÃªn pháº£i khi voice) â€” Blur Ä‘áº­m
+ * Voice Chat Panel (bảng chat bên phải khi voice) — Blur đậm
  * ========================================================= */
 
-/* Container chÃ­nh cá»§a chat panel voice */
+/* Container chính của chat panel voice */
 .theme-dark .chatLayerWrapper__01ae2 .container__01ae2 {
   background: rgba(25, 25, 28, 0.85) !important;
   backdrop-filter: blur(20px);
@@ -12368,7 +12166,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   border-radius: 8px;
 }
 
-/* Header kÃªnh chat voice */
+/* Header kênh chat voice */
 .theme-dark .chatLayerWrapper__01ae2 .container__9293f.themed__9293f {
   background: rgba(25, 25, 28, 0.9) !important;
   backdrop-filter: blur(20px);
@@ -12376,7 +12174,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Khu vá»±c tin nháº¯n */
+/* Khu vực tin nhắn */
 .theme-dark .chatLayerWrapper__01ae2 .chat_ee72fa,
 .theme-dark .chatLayerWrapper__01ae2 .chatContent_f75fb0,
 .theme-dark .chatLayerWrapper__01ae2 .messagesWrapper__36d07,
@@ -12384,7 +12182,7 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background: transparent !important;
 }
 
-/* Thanh nháº­p tin nháº¯n */
+/* Thanh nhập tin nhắn */
 .theme-dark .chatLayerWrapper__01ae2 .channelTextArea__74017 {
   background: transparent !important;
 }
@@ -12403,19 +12201,18 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   background: transparent !important;
 }
 
-/* Gradient dÆ°á»›i chat â€” áº©n */
+/* Gradient dưới chat — ẩn */
 .theme-dark .chatLayerWrapper__01ae2 .chatGradient__36d07 {
   display: none !important;
 }
-<<<<<<< HEAD
 
 
-/* === áº¨n card "Support the Project" (Donate) === */
+/* === Ẩn card "Support the Project" (Donate) === */
 .vc-special-card.vc-special-card-special {
   display: none !important;
 }
 
-/* === XoÃ¡ ná»n xÃ¡m Quick Actions === */
+/* === Xoá nền xám Quick Actions === */
 div.vc-card-base.vc-card-primary.vc-settings-quickActions-card {
   background: none !important;
   background-color: transparent !important;
@@ -12433,7 +12230,7 @@ button.vc-settings-quickActions-pill:hover {
   background: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* === XoÃ¡ ná»n xÃ¡m Family Center === */
+/* === Xoá nền xám Family Center === */
 .container__5dbf8.box_f8c98c,
 .container__8cc9a.box_f8c98c,
 .container__5b321.box_f8c98c,
@@ -12463,7 +12260,7 @@ button.vc-settings-quickActions-pill:hover {
 }
 
 /* =========================================================
- * Activity Popout (User/Voice) â€” Blur
+ * Activity Popout (User/Voice) — Blur
  * ========================================================= */
 .theme-dark .container__4e30a {
   background: rgba(32, 32, 32, 0.7) !important;
@@ -12481,7 +12278,7 @@ button.vc-settings-quickActions-pill:hover {
 }
 
 /* =========================================================
- * Game Activity Popout â€” Blur
+ * Game Activity Popout — Blur
  * ========================================================= */
 .theme-dark .popout_af3b89 {
   background: rgba(32, 32, 32, 0.7) !important;
@@ -12500,7 +12297,7 @@ button.vc-settings-quickActions-pill:hover {
 }
 
 /* =========================================================
- * Search Results Popout â€” Blur
+ * Search Results Popout — Blur
  * ========================================================= */
 .theme-dark [class*="searchResultsWrap_"] {
   background: rgba(58, 58, 58, 0.3) !important;
@@ -12518,7 +12315,7 @@ button.vc-settings-quickActions-pill:hover {
 }
 
 /* =========================================================
- * Filter Modal â€” Blur
+ * Filter Modal — Blur
  * ========================================================= */
 .theme-dark [data-mana-component="modal"][class*="container_"] {
   background: rgba(32, 32, 32, 0.45) !important;
@@ -12689,7 +12486,7 @@ button.vc-settings-quickActions-pill:hover {
 
 .theme-dark .gameArtHero__8e830 {
   filter: blur(var(--blur-intensity, 0px));
-  /* Optional: normally we don't blur the hero, but user asked 'chá»‰nh blur' */
+  /* Optional: normally we don't blur the hero, but user asked 'chỉnh blur' */
 }
 
 .theme-dark .content__8e830,
@@ -12773,7 +12570,7 @@ button.vc-settings-quickActions-pill:hover {
 }
 
 /* --- Remove background/border from About Section Items --- */
-/* User requested "bá» viá»n Ä‘á»‘ng nÃ y ( Ã½ lÃ  cÃ¡i ná»n bÃªn trong áº¥y" */
+/* User requested "bỏ viền đống này ( ý là cái nền bên trong ấy" */
 .theme-dark .sections__8e830>div {
   background: transparent !important;
   border: none !important;
@@ -12956,5 +12753,8 @@ button.vc-settings-quickActions-pill:hover {
   -webkit-backdrop-filter: blur(8px);
   padding: 12px;
 }
-=======
->>>>>>> 662051bf4f9410a1d98710158323cfd1890bc074
+
+/* Fix spacing specifically for Security Settings page */
+.theme-dark .userSettingsSecurity__2666b .stack_dbd263 {
+  gap: 24px !important;
+}
