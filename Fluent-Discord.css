@@ -12758,3 +12758,265 @@ button.vc-settings-quickActions-pill:hover {
 .theme-dark .userSettingsSecurity__2666b .stack_dbd263 {
   gap: 24px !important;
 }
+
+/* =============================================================
+ * Server Boost / Upgrade Modal — Acrylic Blur
+ * ============================================================= */
+
+/* --- Main modal container --- */
+.theme-dark .root__5c9fc {
+  background: rgba(32, 32, 32, 0.7) !important;
+  backdrop-filter: blur(40px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(150%) !important;
+}
+
+/* --- Header area — keep original pink/gradient background --- */
+
+/* --- Scroller inside boost modal --- */
+.theme-dark .root__5c9fc .scroller__6fd0e {
+  background: transparent !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* --- Tier Cards (Cấp 1, 2, 3) --- */
+.theme-dark .tierCard_be48d0 {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* --- Tier comparison table section --- */
+.theme-dark .tierComparisonTable__6fd0e {
+  background: transparent !important;
+}
+
+.theme-dark .table__686cf {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  overflow: hidden !important;
+}
+
+.theme-dark .tableCell__686cf {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.theme-dark .columnHeading__686cf {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* --- Recommended tier highlight --- */
+.theme-dark .recommendedTierHighlight__686cf {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* --- Middle body content (powerup cards) --- */
+.theme-dark .middleBodyContentWrapper__6fd0e {
+  background: transparent !important;
+}
+
+.theme-dark .container_ef0711 {
+  background: transparent !important;
+}
+
+/* --- Powerup / Top Perks Cards --- */
+.theme-dark .topPerksCard__3add8 {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  overflow: hidden !important;
+}
+
+/* --- Lower body / FAQ section --- */
+.theme-dark .lowerBody__6fd0e {
+  background: transparent !important;
+}
+
+.theme-dark .lowerBodyContentWrapper__6fd0e {
+  background: transparent !important;
+}
+
+/* --- Body wave SVG --- */
+.theme-dark .bodyWave__1dfae {
+  opacity: 0.3 !important;
+}
+
+/* --- Lower body background image --- */
+.theme-dark .lowerBodyBackgroundImage__6fd0e {
+  opacity: 0.2 !important;
+}
+
+/* --- FAQ wrapper --- */
+.theme-dark .wrapper__5b98e {
+  background: transparent !important;
+}
+
+.theme-dark .list__5b98e {
+  padding: 0 16px !important;
+}
+
+.theme-dark .listItem__5b98e {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  margin: 0 16px 4px 16px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* --- Boost recognition cards --- */
+.theme-dark .wrapper__4d7bb {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  overflow: hidden !important;
+}
+
+.theme-dark .card__4d7bb {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+}
+
+/* --- Background images overlay --- */
+.theme-dark .backgroundImages__4d7bb {
+  opacity: 0.15 !important;
+}
+
+/* --- Progress bar section --- */
+.theme-dark .progressBar_b28bb7 {
+  background: transparent !important;
+}
+
+
+
+/* --- Guild boost status section --- */
+.theme-dark .guildStatus_f9f04c {
+  background: transparent !important;
+}
+
+/* --- Persistent CTA bar at bottom — no extra frame --- */
+.theme-dark .root__5c9fc .wrapper_b4589b,
+.theme-dark .root__5c9fc .innerWrapper_b4589b {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* --- Close icon wrapper --- */
+.theme-dark .root__5c9fc .closeIconWrapper__6fd0e {
+  background: transparent !important;
+}
+
+.theme-dark .root__5c9fc .closeIcon__6fd0e .closeButton_c2b141 {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-radius: 4px !important;
+  transition: background-color 150ms ease !important;
+}
+
+.theme-dark .root__5c9fc .closeIcon__6fd0e .closeButton_c2b141:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* =========================================================
+ * Ẩn Voice Panel khi không ở trong Voice
+ * ========================================================= */
+.wrapper_e131a9:empty {
+  display: none !important;
+}
+
+/* ===== Activity Row (Đang chơi game) — Nền blur ===== */
+.theme-dark .root__92958 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+/* ===== Nux Channel (Chọn kênh của bạn) - Nền blur ===== */
+.theme-dark .container_bc0d35 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.theme-dark .nuxContent_bc0d35 {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Event Modal — Blur
+ * ========================================================= */
+.theme-dark .root__49fc1 {
+  background: rgba(32, 32, 32, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark .root__49fc1 .header__49fc1,
+.theme-dark .root__49fc1 .content__49fc1 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* =========================================================
+ * Status Popover — Blur
+ * ========================================================= */
+.theme-dark .popover_d6f39b {
+  background: rgba(32, 32, 32, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark .popover_d6f39b .container__7ccfa {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Chat Header Bar — Blur
+ * ========================================================= */
+.theme-dark .chatHeaderBar_dc83f5 {
+  background: rgba(32, 32, 32, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+ * Stream Preview Popout — Blur
+ * ========================================================= */
+.theme-dark .streamPreview__0489e {
+  background: rgba(32, 32, 32, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark .streamPreview__0489e .body__0489e {
+  background: transparent !important;
+}
