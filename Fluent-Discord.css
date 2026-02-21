@@ -6111,6 +6111,16 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   display: none;
 }
 
+/* Fix Nameplate & Collectibles Visibility inside Modals */
+.theme-dark .content__49fc1 [class*="nameplatePreview_"] video,
+.theme-dark .content__49fc1 [class*="nameplate_"] video,
+.theme-dark .content__49fc1 [class*="nameplated_"] video,
+.theme-dark .content__49fc1 [class*="videoContainer_"] video,
+.theme-dark .content__49fc1 [class*="profileEffects_"] video,
+.theme-dark .content__49fc1 [class*="avatarDecoration_"] video {
+  display: block !important;
+}
+
 .theme-dark .footer__49fc1 {
   padding: 24px;
   background-color: transparent;
@@ -13019,4 +13029,122 @@ button.vc-settings-quickActions-pill:hover {
 
 .theme-dark .streamPreview__0489e .body__0489e {
   background: transparent !important;
+}
+
+/* =========================================================
+ * Game Server Page — Blur
+ * ========================================================= */
+.theme-dark .container__70617,
+.theme-dark .toolbar__70617,
+.theme-dark .contentContainer__70617,
+.theme-dark .gameContainerWrapper__70617,
+.theme-dark .gameContainer__70617 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .card__611f6 {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+}
+
+.theme-dark .card__611f6 .contentWrapper__611f6,
+.theme-dark .card__611f6 .content_cd3207 {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Profile Effect Shop Modal - Blur
+ * ========================================================= */
+.theme-dark .modalContent_c50f62 {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+}
+
+.theme-dark .collectibleInfoContainer_c50f62,
+.theme-dark .variantsContainer_c50f62 {
+  background: transparent !important;
+}
+
+.theme-dark .collectiblePreviewsContainerNoChat_c50f62 {
+  background-color: transparent !important;
+}
+
+.theme-dark .pdpControls_c50f62 {
+  background: transparent !important;
+}
+
+.theme-dark .pfxPreviewContainer_c50f62,
+.theme-dark .avatarPreviewContainer_c50f62 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .profileEffectPreviewsContainerInner_c50f62,
+.theme-dark .previewsContainerInner_c50f62 {
+  background: transparent !important;
+}
+
+.theme-dark .chatPreview_c50f62,
+.theme-dark .nameplateRightPanePreviewContainer_c50f62 {
+  background: rgba(0, 0, 0, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.theme-dark .mockMessage_c50f62,
+.theme-dark .mockInput_c50f62 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.theme-dark .mockInput_c50f62 {
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 8px !important;
+}
+
+.theme-dark .previewContainer_c50f62 {
+  background-image: none !important;
+}
+
+/* =========================================================
+ * Select Option Popout — Blur
+ * ========================================================= */
+.theme-dark .popout_a16aea {
+  background: rgba(32, 32, 32, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark .popout_a16aea .option_a16aea {
+  background: transparent !important;
+}
+
+/* =========================================================
+ * Events Modal - Blur
+ * ========================================================= */
+.theme-dark .root__49fc1,
+.theme-dark [class^="root_"][class*="rootWithShadow_"]:has([class^="header_"]:has(svg)) {
+  background: rgba(32, 32, 32, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark .root__49fc1 .header__49fc1,
+.theme-dark .root__49fc1 .content__49fc1,
+.theme-dark [class^="root_"][class*="rootWithShadow_"]>div {
+  background: transparent !important;
+  background-color: transparent !important;
 }
