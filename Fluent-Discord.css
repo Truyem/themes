@@ -13145,4 +13145,26 @@ button.vc-settings-quickActions-pill:hover {
 .theme-dark [class^="root_"][class*="rootWithShadow_"]>div {
   background: transparent !important;
   background-color: transparent !important;
+}/* GIF Picker Blur */
+#gif-picker-tab-panel,
+#gif-picker-tab-panel .header_fed6d3,
+#gif-picker-tab-panel .content_fed6d3,
+#gif-picker-tab-panel .container_d02962 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+#gif-picker-tab-panel {
+  backdrop-filter: blur(22px) !important;
+}
+#gif-picker-tab-panel .result__2dc39 {
+  background-color: transparent !important;
+}
+/* Sticker Category List Blur */
+.wrapper__4e6ce.categoryList__3ad28 {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: blur(22px) !important;
+}
+.wrapper__4e6ce.categoryList__3ad28 .stickerCategory__3ad28 {
+  background-color: transparent !important;
 }
