@@ -13891,3 +13891,112 @@ div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"]::after {
 .editor__1b31f {
   color: rgba(255, 255, 255, 0.8) !important;
 }
+
+.previewSection__4671c {
+  background: transparent !important;
+}
+
+.previewCards__4671c,
+.previewCards__4671c>div {
+  background: transparent !important;
+}
+
+.themeToggleSection__4671c {
+  display: none !important;
+}
+
+.previewSection__4671c .backgroundThemeContainer__4671c {
+  display: none !important;
+}
+
+.chatMessage__4671c,
+.chatMessage__4671c * {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.chatMessage__4671c {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+}
+
+.previewSection__4671c,
+.previewSection__4671c>div:not(.chatMessage__4671c) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.previewSection__4671c .backgroundThemeContainer__4671c,
+.themeToggleSection__4671c {
+  display: none !important;
+}
+
+.previewSection__4671c [class*="chatMessage"],
+.previewSection__4671c [class*="message__"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+}
+
+.previewSection__4671c [class*="chatMessage"] [class*="contents"],
+.previewSection__4671c [class*="chatMessage"] [class*="container"],
+.previewSection__4671c [class*="chatMessage"] [class*="inner"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.previewSection__4671c {
+  --profile-gradient-overlay-color: transparent !important;
+  --profile-gradient-modal-background-color: transparent !important;
+}
+
+.customColorPicker__459fb {
+  background: rgba(30, 30, 30, 0.65) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4) !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+}
+
+.customColorPicker__459fb .wrapper__889ee {
+  background: transparent !important;
+}
+
+.customColorPicker__459fb .container__5a838,
+.customColorPicker__459fb .control__5a838,
+.customColorPicker__459fb .container__72c38,
+.customColorPicker__459fb .wrapper__72c38,
+.customColorPicker__459fb .container__0f084 {
+  background: transparent !important;
+}
+
+.customColorPicker__459fb .wrapper__72c38 {
+  background: rgba(40, 40, 40, 0.4) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.customColorPicker__459fb .wrapper__72c38:hover {
+  background: rgba(50, 50, 50, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.customColorPicker__459fb .input__0f084 {
+  color: #eeeeee !important;
+  font-family: 'Inter', 'Whitney', sans-serif !important;
+}
+
+.customColorPicker__459fb .leadingText__0f084 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.customColorPicker__459fb .saturation__889ee,
+.customColorPicker__459fb .hue__889ee {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
