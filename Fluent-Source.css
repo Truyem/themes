@@ -14018,3 +14018,31 @@ div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"]::after {
 .vc-favouriteAnything-attachment-accessory:hover {
   background: rgba(255, 255, 255, 0.1) !important;
 }
+
+[class^="outer_ab8609"],
+.outer_ab8609 {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[class^="inner_ab8609"],
+.inner_ab8609 {
+  background: rgba(20, 20, 20, 0.45) !important;
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 6px 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 2px 0 !important;
+}
+
+[class^="content_ab8609"],
+.content_ab8609 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
