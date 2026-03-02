@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @name Fluent Discord
  * @author TakosThings
  * @version 1.12.1
@@ -957,6 +957,42 @@ html.theme-dark .vc-settings-quickActions-card.vc-card-base.vc-card-primary::aft
 .theme-dark .contentRegion__23e6b,
 .theme-dark .contentRegionScroller__23e6b {
   background: transparent;
+}
+
+/* Fix: Channel/Guild Settings — Restore proper left padding for content area */
+/* Use compound selectors for higher specificity to beat Discord's own CSS */
+.theme-dark .layer__960e4 .contentRegionScroller__23e6b,
+.theme-dark .contentRegionScroller__23e6b.contentRegionShownSidebar__23e6b {
+  padding: 20px 40px !important;
+}
+
+/* Content column: left-aligned within the padded scroller (margin-left: 0 not auto) */
+/* Cancel top/bottom 44px from .contentColumn rule, keep horizontal padding */
+.theme-dark .layer__960e4 .contentColumnDefault__23e6b,
+.theme-dark .contentColumnDefault__23e6b {
+  max-width: 740px !important;
+  width: 100% !important;
+  margin-right: auto !important;
+  margin-left: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Fix: Restore padding for custom pages like Server Members so it doesn't overlap the close button */
+.theme-dark .layer__960e4 .customColumn__23e6b.contentColumnDefault__23e6b,
+.theme-dark .customColumn__23e6b.contentColumnDefault__23e6b {
+  padding: 110px 80px 80px 40px !important;
+  max-width: 100% !important;
+  width: auto !important;
+}
+
+/* Hide scrollbar in Server Members page */
+.theme-dark .settingsHorizontalScroller_fa2640 {
+  overflow-x: hidden !important;
+}
+
+.theme-dark .settingsHorizontalScroller_fa2640::-webkit-scrollbar {
+  display: none !important;
 }
 
 .theme-dark .bg__960e4 {
@@ -1973,10 +2009,6 @@ html.theme-dark.app-focused .clickable_c99c29::before {
   background-color: transparent !important;
   position: relative;
   z-index: 1;
-}
-
-.theme-dark .panels__5e434 {
-  /* Blur effects added in Enhanced Blur Effects section at end of file */
 }
 
 .theme-dark .panels__5e434 .container__37e49 {
@@ -3604,7 +3636,7 @@ html[lang^=en-].theme-dark .wrapper_f7ecac .button_f7ecac[aria-label] svg {
 }
 
 .theme-dark .chatLayerWrapper__01ae2 .container__01ae2 {
-  background-color: #202020;
+  background-color: transparent;
 }
 
 .theme-dark .chatLayerWrapper__01ae2 .container__01ae2.floating__01ae2 {
@@ -6842,14 +6874,18 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 }
 
 .theme-dark .contentWrapper__08434,
-.theme-dark #emoji-picker-tab-panel {
+.theme-dark #emoji-picker-tab-panel,
+.theme-dark #files-picker-tab-panel,
+.theme-dark .vc-favouriteAnything-container {
   background: linear-gradient(0deg, rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8));
   backdrop-filter: blur(16px);
   border: 1px solid rgba(117, 117, 117, 0.4);
   border-radius: 8px;
 }
 
-.theme-dark .contentWrapper__08434 #emoji-picker-tab-panel {
+.theme-dark .contentWrapper__08434 #emoji-picker-tab-panel,
+.theme-dark .contentWrapper__08434 #files-picker-tab-panel,
+.theme-dark .contentWrapper__08434 .vc-favouriteAnything-container {
   background: transparent;
   backdrop-filter: none;
   border: 0;
@@ -7030,7 +7066,9 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
 .theme-dark .wrapper__14245 {
   margin: 0 -8px;
   padding: 0 16px;
-  background-color: #282828;
+  background-color: rgba(40, 40, 40, 0.6);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border-radius: 4px;
 }
 
@@ -7894,6 +7932,13 @@ html[lang^=en-].theme-dark .container__133bf .actionButton_f8fa06 svg {
   font-weight: 400;
   line-height: 20px;
   color: #FFF;
+}
+
+/* Align X/ESC button with sidebar header and content heading */
+.theme-dark .layer__960e4 .toolsContainer__23e6b {
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
 }
 
 .theme-dark .layer__960e4 .sectionTitle__7bffb .title_b717a1 {
@@ -12164,58 +12209,81 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 }
 
 /* =========================================================
- * Voice Chat Panel (bảng chat bên phải khi voice) — Blur đậm
+ * Voice Chat Panel — Blur / Glassmorphism
  * ========================================================= */
 
-/* Container chính của chat panel voice */
+/* Container chính */
 .theme-dark .chatLayerWrapper__01ae2 .container__01ae2 {
-  background: rgba(25, 25, 28, 0.85) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
+  background: transparent !important;
+  position: relative !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
 }
 
-/* Header kênh chat voice */
+/* Lớp nền blur phủ toàn container (Trừ phần header 48px ở trên cùng) */
+.theme-dark .chatLayerWrapper__01ae2 .container__01ae2::before {
+  content: "" !important;
+  position: absolute !important;
+
+  /* Bỏ qua 48px của header để header không bị lớp blur đè lên */
+  top: 48px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  z-index: 0 !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(24px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(150%) !important;
+  pointer-events: none !important;
+}
+
+/* Header kênh - Trong suốt nhưng hơi tối so với nền */
 .theme-dark .chatLayerWrapper__01ae2 .container__9293f.themed__9293f {
-  background: rgba(25, 25, 28, 0.9) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  /* Màu trong suốt, hơi tối (0.3 đến 0.5) */
+  background: rgba(0, 0, 0, 0.4) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  /* Đã gỡ bỏ border-bottom để mất cái đường viền đen phía dưới header */
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-/* Khu vực tin nhắn */
+/* Toàn bộ child areas trong chat — transparent */
 .theme-dark .chatLayerWrapper__01ae2 .chat_ee72fa,
 .theme-dark .chatLayerWrapper__01ae2 .chatContent_f75fb0,
 .theme-dark .chatLayerWrapper__01ae2 .messagesWrapper__36d07,
-.theme-dark .chatLayerWrapper__01ae2 .scroller__36d07 {
-  background: transparent !important;
-}
-
-/* Thanh nhập tin nhắn */
-.theme-dark .chatLayerWrapper__01ae2 .channelTextArea__74017 {
-  background: transparent !important;
-}
-
-.theme-dark .chatLayerWrapper__01ae2 .scrollableContainer__74017 {
-  background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-}
-
-/* Form chat + content */
+.theme-dark .chatLayerWrapper__01ae2 .scroller__36d07,
+.theme-dark .chatLayerWrapper__01ae2 .scrollerContent__36d07,
+.theme-dark .chatLayerWrapper__01ae2 .channelTextArea__74017,
+.theme-dark .chatLayerWrapper__01ae2 .channelTextArea__74017:hover,
+.theme-dark .chatLayerWrapper__01ae2 .channelTextArea__74017:focus-within,
 .theme-dark .chatLayerWrapper__01ae2 .form_f75fb0,
 .theme-dark .chatLayerWrapper__01ae2 .channelBottomBarArea_f75fb0 {
   background: transparent !important;
+  background-color: transparent !important;
 }
 
-/* Gradient dưới chat — ẩn */
+/* Ẩn các bóng đổ và viền phân cách khu vực chat ở dưới header */
+.theme-dark .chatLayerWrapper__01ae2 .chat_ee72fa::before,
+.theme-dark .chatLayerWrapper__01ae2 .chatContent_f75fb0::before {
+  display: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Input box */
+.theme-dark .chatLayerWrapper__01ae2 .scrollableContainer__74017 {
+  /* Làm khung gõ chat tối đi một chút bằng cách thêm màu đen thay vì màu trắng */
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  border-radius: 8px !important;
+}
+
+/* Ẩn gradient */
 .theme-dark .chatLayerWrapper__01ae2 .chatGradient__36d07 {
   display: none !important;
 }
-
 
 /* === Ẩn card "Support the Project" (Donate) === */
 .vc-special-card.vc-special-card-special {
@@ -13317,4 +13385,812 @@ button.vc-settings-quickActions-pill:hover {
 /* Victor answer row */
 .theme-dark .victorAnswer_f69538 {
   background: transparent !important;
+}
+
+/* =============================================================
+ * Vencord Notification — Acrylic Blur (Fluent Style)
+ * ============================================================= */
+
+#vc-notification-container .vc-notification-root {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+#vc-notification-container .vc-notification {
+  background: rgba(30, 30, 30, 0.65) !important;
+  backdrop-filter: blur(40px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(150%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+}
+
+#vc-notification-container .vc-notification-content {
+  background: transparent !important;
+}
+
+#vc-notification-container .vc-notification-header {
+  background: transparent !important;
+}
+
+#vc-notification-container .vc-notification-title {
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+#vc-notification-container .vc-notification-p {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 13px !important;
+}
+
+#vc-notification-container .vc-notification-close-btn {
+  color: rgba(255, 255, 255, 0.5) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 4px !important;
+  transition: color 150ms ease, background-color 150ms ease !important;
+}
+
+#vc-notification-container .vc-notification-close-btn:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Game Title */
+.theme-dark .card_e1364f .clickableText_e1364f {
+  color: #fff !important;
+}
+
+/* Game Tags */
+.theme-dark .card_e1364f .tag__25a50 {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.theme-dark .card_e1364f .tag__25a50 div {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.theme-dark .card_e1364f .tag__25a50 svg path {
+  fill: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Social Proof text (e.g. "2 người bạn biết...") */
+.theme-dark .card_e1364f .socialProof_e1364f>div:last-child {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* =============================================================
+ * Activity Tab Cards (Current & Recent) — Acrylic Blur
+ * ============================================================= */
+
+.theme-dark .card__39ec2 {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  overflow: hidden;
+}
+
+.theme-dark .card__39ec2:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Activity Headings (e.g. "Trong kênh thoại", "Trạng thái kênh thoại") */
+.theme-dark .card__39ec2 .headerText__39ec2 {
+  color: #fff !important;
+}
+
+/* Voice icons / Other info */
+.theme-dark .card__39ec2 .voiceChannelText__39ec2 .text-xs\/normal_cf4812 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Divider inside card */
+.theme-dark .card__39ec2 .divider__23eb0 {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+
+/* =============================================================
+ * Activity Avatars (Overlapping Circles) — Acrylic Blur
+/* =============================================================
+ * Activity Avatars (Overlapping Circles) — Acrylic Blur
+ * ============================================================= */
+
+/* The square container holding the avatars */
+.theme-dark .container_e928f4 {
+  background: rgba(30, 30, 30, 0.65) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+}
+
+/* The individual avatar circles inside */
+.theme-dark .circle_e928f4 {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .circle_e928f4 img {
+  opacity: 0.95;
+}
+
+/* =============================================================
+ * Profile/Activity Game Widgets — Acrylic Blur
+ * ============================================================= */
+
+.theme-dark div[class^="outer_"][class*="user-profile-modal"] .container__62dd3,
+.theme-light div[class^="outer_"][class*="user-profile-modal"] .container__62dd3,
+.theme-dark .container__62dd3 {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(8px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(150%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 12px !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* =============================================================
+ * Wishlist Cards — Acrylic Blur
+ * ============================================================= */
+
+.theme-dark .card__39b32,
+.theme-light .card__39b32 {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-dark .card__39b32:hover,
+.theme-light .card__39b32:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* =============================================================
+ * User Profile Modal V2 — Acrylic Blur
+ * ============================================================= */
+
+/* Prevent double background/blur from Discord's modal wrapper class (.root__49fc1 etc) */
+[class^="root_"]:has(.user-profile-modal-v2) {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Make the root modal translucent with blur */
+div[class^="outer_"][class*="user-profile-modal"] {
+  --profile-gradient-primary-color: transparent !important;
+  --profile-gradient-secondary-color: transparent !important;
+  --profile-gradient-modal-background-color: transparent !important;
+  --profile-gradient-overlay-color: transparent !important;
+  background: rgba(30, 30, 30, 0.65) !important;
+  backdrop-filter: blur(32px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(150%) !important;
+}
+
+/* Remove solid backgrounds from internal layout wrappers */
+div[class^="outer_"][class*="user-profile-modal"]>div,
+div[class^="outer_"][class*="user-profile-modal"] [class^="inner_"],
+div[class^="outer_"][class*="user-profile-modal"] [class^="profile_"],
+div[class^="outer_"][class*="user-profile-modal"] [class^="container_"],
+div[class^="outer_"][class*="user-profile-modal"] [class^="tabListScroller_"],
+div[class^="outer_"][class*="user-profile-modal"] [class^="tabBarPanel_"],
+div[class^="outer_"][class*="user-profile-modal"] [class^="tabPanelScroller_"],
+div[class^="outer_"][class*="user-profile-modal"] [class^="section_"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove gradient overlays if Discord uses pseudo-elements */
+div[class^="outer_"][class*="user-profile-modal"]::before,
+div[class^="outer_"][class*="user-profile-modal"]::after,
+div[class^="outer_"][class*="user-profile-modal"] [class^="inner_"]::before,
+div[class^="outer_"][class*="user-profile-modal"] [class^="inner_"]::after {
+  display: none !important;
+}
+
+/* Fix scrolling and cutoff issues */
+div[class^="outer_"][class*="user-profile-modal"] [class^="tabPanelScroller_"],
+div[class^="outer_"][class*="user-profile-modal"] [class^="profileBody_"] {
+  padding-bottom: 24px !important;
+}
+
+[class^="root_"]:has(.user-profile-modal-v2) {
+  overflow: visible !important;
+}
+
+/* =============================================================
+ * Prompt Modal / Dialog — Acrylic Blur
+ * ============================================================= */
+[class^="prompt_"] {
+  background: rgba(30, 30, 30, 0.65) !important;
+  backdrop-filter: blur(16px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+}
+
+[class^="promptContent_"],
+[class^="questionHeader_"],
+[class^="navButtons_"] {
+  background: transparent !important;
+}
+
+[class^="optionButtonWrapper_"] {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+[class^="optionButtonWrapper_"]:hover,
+[class^="optionButtonWrapper_"][class*="selected_"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[class^="optionButton_"] {
+  background: transparent !important;
+}
+
+/* --- Toast Notifications Blur --- */
+.theme-dark [class^="toast_"],
+[class^="toast_"] {
+  background: rgba(30, 30, 30, 0.6) !important;
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Files Picker Blur */
+#files-picker-tab-panel,
+#files-picker-tab-panel .vc-favouriteAnything-container-header,
+#files-picker-tab-panel .vc-favouriteAnything-container-body,
+#files-picker-tab-panel .vc-favouriteAnything-attachment-container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+#files-picker-tab-panel {
+  backdrop-filter: blur(22px) !important;
+}
+
+/* --- Ignored User Banner (Remove Background) --- */
+div[class^="overlay_"][class*="container_"][class*="profileBanner_"] {
+  background: transparent !important;
+}
+
+/* =============================================================
+ * User Profile Sidebar — Acrylic Blur
+ * ============================================================= */
+div[class^="outer_"][class*="user-profile-sidebar"] {
+  --profile-gradient-primary-color: transparent !important;
+  --profile-gradient-secondary-color: transparent !important;
+  --profile-gradient-modal-background-color: transparent !important;
+  --profile-gradient-overlay-color: transparent !important;
+  background: rgba(30, 30, 30, 0.65) !important;
+  backdrop-filter: blur(32px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(150%) !important;
+}
+
+div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"],
+div[class^="outer_"][class*="user-profile-sidebar"] [class^="body_"],
+div[class^="outer_"][class*="user-profile-sidebar"] [class^="overlay_"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+div[class^="outer_"][class*="user-profile-sidebar"]::before,
+div[class^="outer_"][class*="user-profile-sidebar"]::after,
+div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"]::before,
+div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"]::after {
+  display: none !important;
+}
+
+/* Guild Invite Glassmorphism */
+[class^="guildInviteContainer_"] {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+/* Ensure inner parts are transparent to reveal the blur under it */
+[class^="guildInviteContainer_"] [class^="cardHeightMeasure_"],
+[class^="guildInviteContainer_"] [class^="footer_"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Button restyle to Fluent */
+[class^="guildInviteContainer_"] .buttonContainer__083ae button {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-normal, #fff) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+[class^="guildInviteContainer_"] .buttonContainer__083ae button:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+[class^="guildInviteContainer_"] .buttonContainer__083ae button:active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+
+/* Force transparency on all nested children inside the guild invite container to kill gray backgrounds */
+[class^="guildInviteContainer_"]>* {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+[class^="guildInviteContainer_"] [class^="footer_"],
+[class^="guildInviteContainer_"] [class^="footerContent_"],
+[class^="guildInviteContainer_"] [class^="body_"],
+[class^="guildInviteContainer_"] [class^="buttonContainer_"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* =============================================================
+ * Autocomplete Popup — Acrylic Blur
+ * ============================================================= */
+[class*="autocomplete_"][class*="outerWrapper_"] {
+  background: rgba(30, 30, 30, 0.65) !important;
+  backdrop-filter: blur(22px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(150%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Transparent internal wrappers */
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="autocompleteInner_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="rail_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="list_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="scroller_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="categorySection_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="categoryHeader_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="base_"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Item Hover/Selected Effect */
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="clickable_"]:hover [class*="base_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="clickable_"][aria-selected="true"] [class*="base_"],
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="selectable_"]:hover,
+[class*="autocomplete_"][class*="outerWrapper_"] [class*="selectable_"][class*="selected_"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 4px;
+}
+
+/* =============================================================
+ * Emoji Picker — Acrylic Blur
+ * ============================================================= */
+#emoji-picker-tab-panel {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: blur(22px) !important;
+}
+
+#emoji-picker-tab-panel .emojiPicker_c0e32c,
+#emoji-picker-tab-panel .header_c0e32c,
+#emoji-picker-tab-panel .inspector_c0e32c,
+#emoji-picker-tab-panel .categoryList_c0e32c,
+#emoji-picker-tab-panel .bodyWrapper_c0e32c,
+#emoji-picker-tab-panel .emojiPickerListWrapper_c0e32c,
+#emoji-picker-tab-panel .wrapper__14245,
+#emoji-picker-tab-panel .wrapper_c0e32c,
+#emoji-picker-tab-panel .categorySection_c656ac,
+#emoji-picker-tab-panel .categoryItemDefaultCategory_b9ee0c,
+#emoji-picker-tab-panel .categoryItemGuildCategory_b9ee0c {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Channel Settings Sidebar — align header with X close button */
+.theme-dark .sidebarRegionScroller__23e6b {
+  padding-top: 20px !important;
+  padding-left: 220px !important;
+}
+
+/* Permissions tab — secondary role/member sidebar: remove gray background */
+.theme-dark .sidebarScrollable__53543,
+.theme-dark .scroller__53543,
+.theme-dark .layoutStyle__0ab2c {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Permissions tab — content area: remove gray background from inner containers */
+.theme-dark .layer__960e4 [class*="container_"],
+.theme-dark .layer__960e4 [class*="permOverwrites"],
+.theme-dark .layer__960e4 [class*="permissions_"],
+.theme-dark .layer__960e4 [class*="permissionsContainer"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Permissions tab — settingCard / cardFolder gray background fix */
+.theme-dark .settingCard__1a4ef,
+.theme-dark .cardContent_f62fce,
+.theme-dark .cardFolder__1a4ef {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Unsaved changes notice bar — blur + semi-transparent Fluent style */
+.theme-dark .container__9a9f9 {
+  background: rgba(30, 31, 34, 0.45) !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Integrations tab — add spacing between breadcrumb heading and content */
+.theme-dark .layer__960e4 .breadcrumbs_befe67 {
+  margin-bottom: 16px !important;
+}
+
+.theme-dark .layer__960e4 .footerPlaceholder__98b95 {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.theme-dark .layer__960e4 .footerImage__98b95 {
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin-top: 16px !important;
+  width: 100% !important;
+}
+
+/* Integrations tab — icon wrapper: remove gray bg, add white border */
+.theme-dark .iconWrapper__4a3a5 {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 6px !important;
+}
+
+/* Integrations tab — webhook cards: blur + frosted glass */
+.theme-dark .card_dc2e44,
+.theme-dark .card_eafb9c {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+}
+
+/* Integrations tab — spacer below "New Webhook" button */
+.theme-dark .createButton__97dd8,
+.theme-dark [class*="createButton_"] {
+  margin-top: 16px !important;
+  margin-bottom: 32px !important;
+}
+
+/* Server Boost settings — remove tier background */
+.theme-dark .tier_a36dee,
+.theme-dark .tierHeader_a36dee,
+.theme-dark .tierBody_a36dee,
+.theme-dark .tierHeaderLocked_a36dee,
+.theme-dark .tierHeaderUnlocked_a36dee {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Edit Emoji / Image Modal — frost glass and transparency */
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(32px) !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Make inner elements transparent */
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .modalContent_a13acd,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .content__49fc1,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .main__4d307,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .aside__4d307,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .editor__4d307,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .footer__49fc1,
+.theme-dark .imageEditor_ab2592,
+.theme-dark .editingContainer_ab2592,
+.theme-dark .overlay_ab2592,
+.theme-dark .toolbar_ab2592,
+.theme-dark .toolbarGroup_ab2592,
+.theme-dark .toolbarButton_ab2592 {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Force override for checkerboards anywhere inside dark theme, just in case */
+.theme-dark .checkerboard__4d307,
+.theme-dark .checkerboard__4d307::before,
+.theme-dark .checkerboard__4d307::after,
+.theme-dark [class*="checkerboard_"] {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Preview boxes inside Edit Emoji Modal */
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .aside__4d307 ul {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .aside__4d307 li {
+  background: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .reactions__4d307,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) .jumbo__4d307,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) li>.reactions__4d307,
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) li>.jumbo__4d307 {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Inputs / Search bar inside Edit Emoji Modal */
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) [class*="input_"],
+.theme-dark .root__49fc1:has(.imageEditor_ab2592) [class*="inputDefault_"] {
+  background: rgba(255, 255, 255, 0.12) !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  background-image: none !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Members Page / Main Table Container */
+.theme-dark .mainTableContainer_fa2640 {
+  background: rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.theme-dark .mainTableContainer_fa2640 .searchHeaderContainer__98d1c,
+.theme-dark .mainTableContainer_fa2640 .table__98d1c,
+.theme-dark .mainTableContainer_fa2640 .searchHeader__98d1c {
+  background: transparent !important;
+}
+
+.theme-dark .mainTableContainer_fa2640 .container__0f084 {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.theme-dark .settingsColumn_fa2640 {
+  padding-top: 40px !important;
+  padding-bottom: 20px !important;
+}
+
+/* Make the "moved table" message container transparent */
+.theme-dark .movedTable_fa2640,
+.theme-dark .noResultsContainer_fa2640 {
+  background: transparent !important;
+}
+
+/* Template Description Box and Icons styling */
+.theme-dark .descriptionBox__981f7 {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Green Checkmark Icons */
+.theme-dark .descriptionRow__981f7:has(path[fill="var(--green-360)"]) circle {
+  fill: transparent !important;
+  stroke: var(--green-360) !important;
+  stroke-width: 1.5px;
+  filter: drop-shadow(0 0 5px var(--green-360));
+}
+
+/* Red Crossmark Icons */
+.theme-dark .descriptionRow__981f7:has(path[fill="var(--red-400)"]) circle {
+  fill: transparent !important;
+  stroke: var(--red-400) !important;
+  stroke-width: 1.5px;
+  filter: drop-shadow(0 0 5px var(--red-400));
+}
+
+/* Feature Cards transparency */
+.theme-dark .featureCard__7dd5e {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* AutoMod Edit Card & Action Tags */
+.theme-dark .editCard_a25a68 {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-dark .actionContainer_bc4513 {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Sensitive Content Filter */
+.theme-dark .contentExpandContainer__217b7,
+.theme-dark .groupHeaderRow__6f5a6,
+.theme-dark .groupCollapsedContainer__6f5a6,
+.theme-dark .container_d96a9c,
+.theme-dark .clickableContainer_d96a9c,
+.theme-dark .backgroundModifierContainer_d96a9c {
+  background: transparent !important;
+}
+
+.theme-dark .backgroundModifierContainer_d96a9c {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+  /* Assuming rounded corners based on typical Discord style */
+}
+
+.theme-dark .backgroundModifierContainer_d96a9c:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Make selected filter more obvious */
+.theme-dark .backgroundModifierContainer_d96a9c.selected_d96a9c {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Empty States & Lists (e.g. Bans) */
+.theme-dark .emptyState__4b8d8,
+.theme-dark .scrollerContainer__4b8d8,
+.theme-dark .bannedUser__4b8d8 {
+  background: transparent !important;
+}
+
+/* Audit Logs */
+.theme-dark .auditLog__43dab,
+.theme-dark .headerDefault__43dab,
+.theme-dark .headerClickable__43dab,
+.theme-dark .header__43dab {
+  background: transparent !important;
+}
+
+.theme-dark .auditLog__43dab {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  /* Add some spacing between rows if needed */
+}
+
+/* For hover states on clickable headers */
+.theme-dark .headerClickable__43dab:hover,
+.theme-dark .headerDefault__43dab:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* App Cards */
+.theme-dark .card__84e3e,
+.theme-dark .card_f215b9 {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-dark .card__84e3e:hover,
+.theme-dark .card_f215b9:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Join Options Wrapper (Server Settings) */
+.theme-dark .joinOptions__959cb {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Individual Join Option Tabs */
+.theme-dark .joinOptions__959cb .joinOptionTab__959cb {
+  background: transparent !important;
+  border: none !important;
+}
+
+.theme-dark .joinOptions__959cb .joinOptionTab__959cb:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.theme-dark .joinOptions__959cb .joinOptionTab__959cb[aria-selected="true"] {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Rules Section Settings */
+.theme-dark .rules__92677 {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+}
+
+/* Mentioned Messages (Blue) */
+.theme-dark .message__80c10.mentioned__5126c {
+  background: rgba(0, 136, 255, 0.1) !important;
+}
+
+.theme-dark .message__80c10.mentioned__5126c:before {
+  background-color: #0088ff !important;
+}
+
+.theme-dark .message__80c10.mentioned__5126c:hover {
+  background: rgba(0, 136, 255, 0.15) !important;
+}
+
+/* --- Voice Chat Fixes --- */
+.theme-dark .callContainer_cb9592,
+.theme-dark .wrapper_cb9592,
+.theme-dark .videoControls_bfe55a,
+.theme-dark .chatLayerWrapper__01ae2,
+.theme-dark .chatTarget__01ae2,
+.theme-dark .container__01ae2,
+.theme-dark .chat_ee72fa,
+.theme-dark .channelChatWrapper_cb9592,
+.theme-dark .chatContent_f75fb0 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+.theme-dark .chat_f75fb0,
+.theme-dark .scroller__36d07,
+.theme-dark .scrollerContent__36d07,
+.theme-dark .form_f75fb0,
+.theme-dark .wrapper_d852db,
+.theme-dark .messagesWrapper__36d07 {
+  background: transparent !important;
+  background-color: transparent !important;
 }
