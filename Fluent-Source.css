@@ -11968,8 +11968,44 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
   border-radius: 8px;
 }
 
-.theme-dark .bgScale_b78547 {
+.theme-dark .bgScale_b78547,
+.chat_fb64c9,
+.messagesWrapper_fb64c9,
+.form_fb64c9 {
   background: transparent !important;
+}
+
+.container__60fa3,
+.gridContainer__623de,
+.container__93db4 {
+  background: rgba(32, 32, 32, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+}
+
+.container_fb64c9 {
+  position: relative !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.container_fb64c9::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 0 !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(24px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(150%) !important;
+  pointer-events: none !important;
 }
 
 .theme-dark .chatLayerWrapper__01ae2 .container__01ae2 {
@@ -14066,9 +14102,7 @@ div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"]::after {
 
 .container__551b0 {
   background: rgba(255, 255, 255, 0.02) !important;
-  /* Extremely transparent */
   backdrop-filter: blur(4px) !important;
-  /* Low blur to see through */
   -webkit-backdrop-filter: blur(4px) !important;
 }
 
