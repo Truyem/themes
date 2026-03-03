@@ -14079,28 +14079,6 @@ div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"]::after {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
-.aboutContainer__17a6d,
-.content__17a6d,
-.scroller__33a00,
-.section__17a6d,
-.descriptionContainer__17a6d,
-.overviewContainer__17a6d,
-.root__00dfb,
-[class^="modal_"],
-[class^="root_"],
-[class*="sectionContainer_"],
-[class*="contentContainer_"],
-[class*="commandContainer_"],
-[class*="permission_"],
-[class*="intentContainer_"],
-[class*="container_"],
-[class*="card_"],
-[class*="row_"] {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
 .aboutContainer__17a6d * {
   background: transparent !important;
   background-color: transparent !important;
