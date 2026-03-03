@@ -14046,3 +14046,118 @@ div[class^="outer_"][class*="user-profile-sidebar"] [class^="inner_"]::after {
   background: transparent !important;
   background-color: transparent !important;
 }
+
+[class^="pageWrapper_"],
+[class^="container_551b0"],
+[class^="sidebarList_"],
+[class^="scroller_5e434"],
+[class^="applicationStore_"],
+[class^="directoryContainer_"],
+[class^="scroller_"],
+[class^="container_abd9a8"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.sidebarList__5e434,
+.sidebarListRounded__5e434 {
+  background: transparent !important;
+}
+
+.container__551b0 {
+  background: rgba(255, 255, 255, 0.02) !important;
+  /* Extremely transparent */
+  backdrop-filter: blur(4px) !important;
+  /* Low blur to see through */
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+.headerBar__8a7fc {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.aboutContainer__17a6d,
+.content__17a6d,
+.scroller__33a00,
+.section__17a6d,
+.descriptionContainer__17a6d,
+.overviewContainer__17a6d,
+.root__00dfb,
+[class^="modal_"],
+[class^="root_"],
+[class*="sectionContainer_"],
+[class*="contentContainer_"],
+[class*="commandContainer_"],
+[class*="permission_"],
+[class*="intentContainer_"],
+[class*="container_"],
+[class*="card_"],
+[class*="row_"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.aboutContainer__17a6d * {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.aboutContainer__17a6d {
+  background: rgba(255, 255, 255, 0.01) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+.aboutContainer__17a6d {
+  background: rgba(255, 255, 255, 0.01) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+.detailHeaderContainer_e1147e {
+  background: transparent !important;
+}
+
+.nav__551b0,
+.header__551b0,
+.navItem__551b0 {
+  background: transparent !important;
+}
+
+.navItem__551b0:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.navItem__551b0.selected__551b0 {
+  background: hsla(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness, 42%), 0.15) !important;
+  border-left: 3px solid hsl(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness));
+}
+
+.iconButton__8a7fc {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 4px;
+}
+
+.button_a22cb0.primary_a22cb0 {
+  background: hsla(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness, 42%), 0.6) !important;
+}
+
+.button_a22cb0.secondary_a22cb0 {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.defaultColor__4bd52,
+.text-md/medium_cf4812,
+.text-sm/medium_cf4812,
+.detailHeader_e1147e,
+.navItemIcon__551b0 svg,
+.icon_a22cb0,
+.lineClamp1__4bd52 {
+  color: white !important;
+}
